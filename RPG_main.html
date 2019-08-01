@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        RPG_main()</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p>
+        <h1><a href="index.html">WEB</a></h1>
+    <br />
+        <ul>
+        <li> <h2><a href="open_code.html">Open Code</a></h2></li>
+       <li><h2><a href="c_cpp_code.html">C/C++</a></h2></li>
+         </ul>
+    </p>
+
+    <p>
+        <h3><strong>RPG_main()</strong></h3>
+        <br />
+        <br />
+
+         RPG_Test
+
+        <ol>
+            <li>#include <iostream></li>
+            <li> #include "Monster.h"</li>
+            <li>#include "Player.h" </li>
+            <li>#include "NPC.h" </li>
+            <li> #include "State.h" </li>
+            <li> #include "UI.h" </li>
+            <li> #include "Maps.h"</li>
+            <li>  #include "System.h"</li>
+
+            <li>  using namespace std;</li>
+
+            <br />
+            int main()
+            {
+            system("cls");
+            <br />
+            Player pl;
+            <br />
+            Monster mon;
+            <br />
+            Maps map;
+            <br />
+            NPC npc;
+            <br />
+            UI ui;
+            <br />
+            System sy;
+            <br />
+            <br />
+            sy.mp->moncreate();
+            <br />
+            sy.pp->PlayerCreate();
+            <br />
+            pl.PlayerCreate();
+            <br />
+            <br />
+            map.Map();
+            <br />
+            sy.StartMain();
+            <br />
+            <br />
+            map.stage();
+            <br />
+            system("cls");
+            <br />
+            mon.Draw(15, 15);
+            <br />
+            <br />
+            int Count = 0;
+            <br />
+            <br />
+            while (1)
+            <br />
+            {
+            <br />
+            system("cls");
+            <br />
+            <br />
+            map.Map2();
+            <br />
+            map.Gate();
+            <br />
+            <br />
+            mon.Draw(sy.mp->GetX(), sy.mp->GetY());
+            <br />
+            <br />
+            pl.Draw(sy.pp->GetX(), sy.pp->GetY());
+            <br />
+            <br />
+            ui.PlayUI(sy.pp);
+            <br />
+            ui.MonsterUI(sy.mp);
+            <br />
+            ui.HintUI();
+            <br />
+            <br />
+            sy.Menu();
+            <br />
+            sy.MonsterMove();
+            <br />
+            <br />
+            Sleep(500);
+            <br />
+            }
+            <br />
+            <br />
+            return 0;
+            <br />
+            <br />
+            }
+            <br />
+            <br />
+        </ol>
+
+    </p>
+
+    <p>
+        <div id="disqus_thread"></div>
+        <script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://web1-r8ownsi0f5.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </p>
+
+
+</body>
+</html>
