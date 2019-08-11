@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title>Open_Code</title>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+
+<h1><a href="index.html">WEB</a></h1>
+
+<h2>Open Code</h2>
+
+<ol>
+	<li><a href="LinkedHTML.html">HTML</a></li>
+	<li><a href="LinkedCSS.html">CSS</a></li>
+	<li><a href="LinkedJavaScript.html">JavaScript</a></li>
+	<li><a href="LinkedGames.html">Games</a></li>
+</ol>
+
+<ul>
+	<h2><li><a href="open_code.html">open_code </a></li></h2>
+	<h2><li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li></h2>
+
+</ul>
+
+<p>
+<details>
+<summary><strong>State.cpp</strong></summary>
+<pre>
+<strong>Nothing</strong>
+</pre>
+</details>
+</p>
+
+<p>
+<details>
+<summary><strong>State.h</strong></summary>
+<pre>
+#pragma once
+
+class State
+{
+private:
+
+	int Attack; //공격력
+	int Defence; //방어력
+	int HP; // 체력
+	int MP; //마력;
+	int Level;
+	//int Item[6] = { 0,1,2,3,4,5 };  //임시 물약//0. HP 회복 1. MP회복 2. 공격력 상승 3. 방어력 상승
+	int Save;
+	int Load;
+	
+	int exe;
+	int gold;
+
+public:
+
+	State();
+	~State();
+
+	int Get_Attack()
+	{
+		return Attack;
+	}
+
+	void Set_Attack(int _Attack)
+	{
+		Attack = _Attack;
+	}
+
+	int Get_Defence()
+	{
+		return Defence;
+	}
+
+	void Set_Defence(int _Defence)
+	{
+		Defence = _Defence;
+	}
+
+	void Set_HP(int _HP)
+	{
+		HP = _HP;
+	}
+
+	int Get_HP()
+	{
+		return HP;
+	}
+
+	void Set_MP(int _MP)
+	{
+		MP = _MP;
+	}
+
+	int Get_MP()
+	{
+		return MP;
+	}
+
+	int Get_Level()
+	{
+		return Level;
+	}
+
+	void Set_Level(int _Level)
+	{
+		Level = _Level;
+	}
+	int Get_exe()
+	{
+		return exe;
+	}
+	void Set_exe(int _exe)
+	{
+		exe = _exe;
+	}
+	int Get_gold()
+	{
+		return gold;
+	}
+	void Set_gold(int _gold)
+	{
+		gold = _gold;
+	}
+
+};
+</pre>
+</details>
+</p>
+</body>
+
+</html>

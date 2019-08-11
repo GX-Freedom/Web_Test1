@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html>
+
+
+<html>
+
+<head>
+ <title>Open_Code</title>
+  <meta charset="utf-8" />
+</head>
+
+
+<body>
+
+<h1><a href="index.html">WEB</a></h1>
+
+<h2>Open Code</h2>
+
+<ol>
+	<li><a href="LinkedHTML.html">HTML</a></li>
+	<li><a href="LinkedCSS.html">CSS</a></li>
+	<li><a href="LinkedJavaScript.html">JavaScript</a></li>
+	<li><a href="LinkedGames.html">Games</a></li>
+</ol>
+
+<ul>
+	<h2><li><a href="open_code.html">open_code </a></li></h2>
+	<h2><li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li></h2>
+
+</ul>
+
+<p>
+<details>
+<summary><strong>System.cpp</strong></summary>
+<p>
+<pre>
+#include "System.h"
+
+System::System()//몬스터와 플레이어 동적으로 생성(?)
+{
+	mp = new Monster[10];
+	pp = new Player();
+	mp->moncreate();
+	pp->PlayerCreate();
+	np = new NPC();
+}
+
+
+System::~System()
+{
+	delete mp;
+	delete pp;
+	delete np;
+}
+
+</pre>
+</p>
+</details>
+<details>
+    <summary><strong>Sysytem.h</strong></summary>
+	<p>
+	<pre>
+	#pragma once
+#include <iostream>
+#include <conio.h>
+#include <Windows.h>
+#include <iomanip>
+#include <string>
+#include <istream>
+#include "Player.h"
+#include "Monster.h"
+#include "Maps.h"
+
+#define LEFT 75// 좌측방향키
+#define RIGHT 77// 우측방향키
+#define UP 72// 위쪽방향키
+#define DOWN 80// 아래방향키
+#define SPACE 32//스페이스(선택)
+
+using namespace std;
+
+class System
+{
+private:
+
+	int _x;
+	int _y;
+
+	//몬스터 움직임 좌표
+	short MAXX = 73;
+	short MINX = 0;
+	short MAXY = 23;
+	short MINY = 0;
+	bool _xdirect = true; 
+	bool _ydirect = true;
+	//몬스터 움직임 좌표
+
+public:
+
+	System();
+	~System();
+
+	string name;
+	Maps* mm;
+	Player pl;
+	State st;
+	Monster* mp;
+	Player* pp;
+	NPC* np;
+
+	int state = 0;
+
+	void Gotoxy()
+	{
+		COORD pos = { (short)_x ,(short)_y };
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+	}
+
+	void Loadchar()//캐릭터 불러오기
+	{
+	}
+
+	void Savechar()//캐릭터 저장;
+	{
+	}
+
+	void Draw()//선택 
+	{
+		Gotoxy();
+		cout << "▶";
+	}
+
+	void StartMain()//시작 메뉴
+	{
+		int _x = 1;
+		int _y = 1;
+		cout << "--메뉴선택--\n";
+		cout << setw(3) << "|1.새로하기|\n";
+		cout << setw(3) << "|2.불러오기|\n";
+		cout << setw(3) << "|3.종료하기|\n";
+		cout << setw(3) << "------------\n";
+
+		Gotoxy(_x, _y);//메뉴 위치
+
+
+		char select;
+		Gotoxy(_x = 15, _y = 24);//입력 위치
+		cin >> select;
+
+		switch (select)//선택
+		{
+
+		case'1':
+		{
+			Sleep(800);
+			Gotoxy(_x, _y);
+			cout << setw(5) << "게임을 불러옵니다.....\n";
+			Sleep(500);
+			Gotoxy(_x, _y++);
+			cout << setw(5) << "게임을 불러옵니다....\n";
+			Sleep(300);
+			Gotoxy(_x, _y++);
+			cout << setw(5) << "게임을 불러옵니다...\n";
+			Sleep(300);
+			Gotoxy(_x, _y++);
+			cout << setw(5) << "게임을 불러옵니다.\n";
+
+			Sleep(250);
+			pl.NewCha();
+
+			break;
+		}
+		case'2':
+		{
+			Loadchar();
+			break;
+		}
+		case'3':
+		{
+			
+			break;
+		}
+
+		}
+	}
+
+	void MonsterMove()//몬스터 움직임
+	{
+		if ((mp->GetX() > MINX && mp->GetX() < MAXX) && (mp->GetY() > MINY && mp->GetY() < MAXY))//맵 범위 안에서 움직임
+		{
+			if (_xdirect)
+			{
+				_x = rand() % 27;
+			}
+			if (_ydirect)
+			{
+				_y = rand() % 23;
+			}
+		}
+		else//범위 밖으로 나가면 돌아오기
+		{
+			if (mp->GetX() <= MINX)
+			{
+				_xdirect = 1;
+				_x = 1;
+			}
+			else if (mp->GetX() >= MAXX)
+			{
+				_xdirect = 0;
+				_x = 73;
+			}
+			else if (mp->GetY() <= MINX)
+			{
+				_ydirect = 1;
+				_y = 1;
+			}
+			else if (mp->GetY() >= MAXY)
+			{
+				_ydirect = 0;
+				_y = 23;
+			}
+		}
+
+		mp->SetX(_x);
+		mp->SetY(_y);
+
+		if ((pp->GetX() <= mp->GetX() + 3 && pp->GetX() >= mp->GetX() - 3) || (pp->GetY() <= mp->GetY() + 3 && pp->GetY() >= mp->GetY() - 3))//랜덤하게 움직이고 범위 안에 왔을 시 공격
+		{
+			
+			if ((pp->GetX() <= mp->GetX() + 1 && pp->GetX() >= mp->GetX() - 1) || (pp->GetY() <= mp->GetY() + 1 && pp->GetY() >= mp->GetY() - 1))//크리티컬 데미지
+			{
+				pp->Set_HP(pp->Get_HP() - (mp->GetAttack()*2 - pp->Get_Defence()));
+
+				Gotoxy(16, 27);
+				cout << "moseter 공격 성공 : " << mp->GetAttack()*2 - pp->Get_Defence() << "크리티컬 데미지" << "\n";
+			}
+			else//기본 공격
+			{
+				pp->Set_HP(pp->Get_HP() - (mp->GetAttack() - pp->Get_Defence()));
+
+				Gotoxy(16, 26);
+				cout << "moseter 공격 성공 : " << mp->GetAttack() - pp->Get_Defence() << "데미지" << "\n";
+			}
+		}
+	}
+
+	void Run()
+	{
+		Gotoxy(1, 25);
+		cout << "도망 실패.";
+	}
+
+	void Gotoxy(short _a, short _b)
+	{
+		COORD pos = { _a , _b };
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+	}
+
+	void Menu() //캐릭터 행동 선택
+	{ 	
+		int _x = 1;
+		int _y = 25;
+		Gotoxy(_x, _y);
+		
+			cout << "  1.이동  ";
+			cout << "  2.공격  ";
+			cout << "  3.아이템 사용";
+			cout << " 4.도망가기";
+
+			int ch;
+			ch = _getch();
+				switch (ch)
+				{
+				case'1':
+				{
+					Gotoxy(_x, _y);
+					cout << "                                                                ";
+					pp->Move();
+					break;
+				}
+				case'2':
+				{
+					Gotoxy(_x, _y);
+					cout << "                                                                ";
+					Attack();
+					break;
+				}
+				case'3':
+				{
+					Gotoxy(_x, _y);
+					cout << "                                                                 ";
+					Item();
+					break;
+				}
+				case'4':
+				{
+					Gotoxy(_x, _y);
+					cout << "                                                                 ";
+					Run();
+					break;
+				}
+
+				}
+			
+	}
+
+	void Item()
+	{
+		int _x = 2;
+		int _y= 25;
+		Gotoxy(_x, _y);
+		//cout << "미구현" << "\n";
+		pp->ItemUse(pp, np);
+	}
+
+	void Attack()//플레이어 공격 선택
+	{
+		int _x = 1;
+		int _y = 25;
+		Gotoxy(_x, _y++);
+		cout << "1.일반 공격\n";
+		Gotoxy(_x, _y++);
+		cout << "2.스킬 공격\n"; 
+		Gotoxy(_x, _y++);
+		cout << "3.마법 공격\n";
+
+		char sel = _getch();
+
+		switch (sel)
+		{
+		case'1':
+		{		//pp->x+3<= mp->x&& pp->x-3>= mp->x
+				//pp->x <= mp->x+3 &&pp->x >= mp->x-3(||)pp->y <= mp->y+3 && pp->y >= mp->y-3;
+			if ((pp->GetX()<=mp->GetX()+2&&pp->GetX()>=mp->GetX()-2)||(pp->GetY()<=mp->GetY()+2&&pp->GetY()>=mp->GetY()-2))//공격 범위
+			{
+
+				//if ((pp->GetX() < mm->Get_X() && mp->GetX() > mm->Get_X()) || (pp->GetX() > mm->Get_X() && mp->GetX() < mm->Get_X()))//벽으로 인한 공격 범위 밖 표현(?)
+				
+					//cout << "벽에 막혀 공격 실패";
+				
+				//else
+				
+					mp->SetHP(mp->GetHP() - (pp->Get_Attack() - mp->GetDefence()));
+
+					cout << "player 공격 성공: " << pp->Get_Attack() - mp->GetDefence() << "\n";
+				
+			}
+			else
+			{
+				cout << "공격 실패: 공격 범위 밖입니다.\n";
+			}
+			break;
+		}
+		case'2':
+		{
+			if ((pp->GetX() <= mp->GetX() + 5 && pp->GetX() >= mp->GetX() - 5) || (pp->GetY() <= mp->GetY() + 5 && pp->GetY() >= mp->GetY() - 5))
+			{
+				pl.Skill(mp, pp);
+			}
+			else
+			{
+				cout << "공격 실패: 공격 범위 밖입니다.\n";
+			}
+			break;
+		}
+		case'3':
+		{
+			if ((pp->GetX() <= mp->GetX() + 6 && pp->GetX() >= mp->GetX() - 6) || (pp->GetY() <= mp->GetY() + 6 && pp->GetY() >= mp->GetY() - 6))
+			{
+				pl.Magic(mp, pp);
+			}
+			else
+			{
+				cout << "공격 실패: 공격 범위 밖입니다.\n";
+			}
+			break;
+		}
+			
+
+		}
+		if (mp->GetHP() <= 0)
+		{
+			mp->~Monster();
+			mm->NextStage();
+
+			pp->Set_exe(pp->Get_exe() + 75 + rand() % 40);
+			
+		}
+		if (pp->Get_HP() <= 0)
+		{
+			pp->~Player();
+			mp->Setexe(mp->Getexe() + rand() % 100);
+			
+		}
+	}
+
+};
+	</pre>
+	</p>
+</details>
+
+
+</p>
+
+
+</body>
+</html>

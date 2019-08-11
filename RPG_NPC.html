@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title>Open_Code</title>
+  <meta charset="utf-8" />
+</head>
+
+
+<body>
+
+<h1><a href="index.html">WEB</a></h1>
+
+<h2>Open Code</h2>
+
+<ol>
+	<li><a href="LinkedHTML.html">HTML</a></li>
+	<li><a href="LinkedCSS.html">CSS</a></li>
+	<li><a href="LinkedJavaScript.html">JavaScript</a></li>
+	<li><a href="LinkedGames.html">Games</a></li>
+</ol>
+
+<ul>
+	<h2><li><a href="open_code.html">open_code </a></li></h2>
+	<h2><li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li></h2>
+
+</ul>
+
+<p>
+<details>
+<summary><strong>NPC.cpp</strong></summary>
+<pre>
+<strong>Nothing</strong>
+</pre>
+</details>
+</p>
+<p>
+<details>
+<summary><strong>NPC.h</strong></summary>
+<pre>
+#pragma once
+#include <string>
+#include <iostream>
+#include <Windows.h>
+#include <conio.h>
+
+using namespace std;
+
+class NPC
+{
+private:
+
+	int Quest;
+	
+	int item[3] = { 0 };//아이템 수량
+	
+	int HPP;//HP포션
+	int MPP;//MP포션
+
+public:
+
+	NPC();
+	~NPC();
+	int icount = 0;
+
+	int* ap = item;
+
+	//int* ip = new int[3]{ 0 };
+	short x = 22;
+	short y = 10;
+
+	void Gotoxy(short x, short y)
+	{
+		COORD pos = { x , y };
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+	}
+
+	void Draw()//NPC 상점 임시
+	{
+		Gotoxy(22, 10);
+		cout << "＃";
+	}
+
+	/*
+	string GetSlot()
+	{
+		return Slot;
+	}
+	void SetSlot(string _Slot)
+	{
+		Slot = _Slot;
+	}
+
+	void SlotChange(Player* pp, NPC* np)
+	{
+		int i;
+		string j[3];
+		j[0] = "헬 파이어";
+		j[1] = "힐링";
+		j[3] = "빈 슬롯";
+		if (i == 0 && pp->Get_Slot == 0)
+		{
+			cout << "빈 슬롯\n";
+		}
+		else if (i == 1 && pp->Get_Slot == 1)
+		{
+			pp->Set_Slot(j[0]);
+			cout << "헬파이어를 획득 하셨습니다.\n";
+		}
+
+	}
+
+	void SlotCreate()
+	{
+		Slot = "빈 슬롯";
+	}
+	*/
+
+};
+
+/*
+if (i == 2 && pp->Get_Level <3)
+			{
+				cout << "레벨이 부족합니다. ..\n";
+			}
+			else if (i = 2 &&  pp->Get_MP() < 4)
+			{
+				cout << "마력이 부족합니다...\n";
+			}
+			else
+			{
+				cout << "스킬 사용 실패\n";
+			}
+*/
+</pre>
+</details>
+</p>
+
+</body>
+</html>

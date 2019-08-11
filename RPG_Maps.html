@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+
+<head>
+ <title>Open_Code</title>
+  <meta charset="utf-8" />
+</head>
+
+
+<body>
+
+<h1><a href="index.html">WEB</a></h1>
+
+<h2>Open Code</h2>
+
+<ol>
+	<li><a href="LinkedHTML.html">HTML</a></li>
+	<li><a href="LinkedCSS.html">CSS</a></li>
+	<li><a href="LinkedJavaScript.html">JavaScript</a></li>
+	<li><a href="LinkedGames.html">Games</a></li>
+</ol>
+
+<ul>
+	<h2><li><a href="open_code.html">open_code </a></li></h2>
+	<h2><li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li></h2>
+
+</ul>
+
+<p>
+
+<details>
+<summary><strong>Maps.cpp</strong></summary>
+<pre>
+#include "Maps.h"
+
+Maps::Maps()
+{
+	x = 15;
+	y = 2;
+}
+
+
+Maps::~Maps()
+{
+}
+</pre>
+</details>
+</p>
+
+<p>
+
+<details>
+<summary><strong>Maps.h</strong></summary>
+<pre>
+#pragma once
+#include <iostream>
+#include <Windows.h>
+#include "Monster.h"
+#include "NPC.h"
+
+using namespace std;
+
+class Maps
+{
+private:
+
+	int x = 22;
+	int y = 2;
+	NPC npc;
+
+	enum { XMAX = 70, XMNI = 1, YMAX = 20, YMIN = 1 };
+
+public:
+
+	Maps();
+	~Maps();
+
+	void Gotoxy(short x, short y)
+	{
+		COORD pos = { x , y };
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+	}
+
+	int Get_X()
+	{
+		return x;
+	}
+	void Set_X(short _x)
+	{
+		x = _x;
+	}
+	int Get_Y()
+	{
+		return y;
+	}
+	void Set_Y(short _y)
+	{
+		y = _y;
+	}
+
+	void Map()
+	{
+		Gotoxy(0, 0);
+		for (int i = 0; i <= 23; ++i)
+		{
+			for (int j = 0; j <= 75; ++j)
+			{
+				if ((i > 0 && i < 23) && (j > 0 && j < 75))
+				{
+					cout << " ";
+
+				}
+				else
+				{
+					cout << "*";
+				}
+			}
+				cout << "\n";
+		}
+	}
+
+	void Inside(int _x, int _y)
+	{
+		for (int i = 0; i <= 3; ++i)
+		{
+			for (int j = 0; j <= 3; ++j)
+			{
+				Gotoxy(_x, _y);
+				_y = rand() % 45;
+				_x = rand() % 45;
+				if ((_x >= 2 && _x <= 74) && (_y >= 2 && _y <= 22))//맵 범위 안에서 생성
+				{
+					cout << "♠";
+				}
+				else if (_x <= 0)
+				{
+					_x = 2;
+				}
+				else if (_x >= 75)
+				{
+					_x = 73;
+				}
+				else if (_y <= 0)
+				{
+					_y = 2;
+				}
+				else if (_y >= 23)
+				{
+					_y = 21;
+				}
+			}
+			cout << "\n";
+		}
+	}
+
+	void Map2()
+	{
+		Gotoxy(0, 0);
+		for (int i = 0; i <= 23; ++i)
+		{
+			for (int j = 0; j <= 75; ++j)
+			{
+				if ((i > 0 && i < 23) && (j > 0 && j < 75))
+				{
+					cout << " ";
+
+				}
+				else
+				{
+					cout << "*";
+				}
+			}
+			cout << "\n";
+		}
+
+		NextGate_R();
+		NextGate_L();
+		NextGate_U();
+		NextGate_D();
+		Inside(rand() % 35, rand() % 30);
+		Inside(rand() % 35, rand() % 30);
+		Inside(rand() % 35, rand() % 30);
+	}
+	
+	void stage()
+	{
+		static int count = 1;
+		system("cls");
+		Map2();
+
+		Gotoxy(30, 3);
+		
+		cout << "#STAGE :" << count << " #" << "\n";
+		count++;
+		Sleep(1200);
+	}
+
+	void Gate()
+	{
+		Set_X(22);
+		Set_Y(2);
+		
+		/*
+		if (stage > 1)
+		{
+			for (int i = 0; i < 5; ++i)
+			{
+				if (Get_X() < 45 && Get_Y() < 22)
+				{
+					Set_X(rand() % 15);
+					Set_Y(rand() % 15);
+				}
+				else if (Get_X() >= 45 && Get_Y() >= 23)
+				{
+					Set_X(-(rand()%20));
+					Set_Y(-(rand()%20));
+				}
+			}
+		}
+		*/
+		
+		Gotoxy(Get_X(), Get_Y());
+		cout << "＠";
+	}
+
+	void NewMaps()
+	{
+		system("cls");
+		Gotoxy(0, 0);
+		for (int i = 0; i <= 23; ++i)
+		{
+			for (int j = 0; j <= 75; ++j)
+			{
+				if ((i > 0 && i < 23) && (j > 0 && j < 75))
+				{
+					cout << " ";
+
+				}
+				else
+				{
+					cout << "*";
+				}
+			}
+			cout << "\n";
+		}
+
+		Gotoxy(25, 1);
+		cout << "Map2\n";
+		Gotoxy(25, 2);
+		cout << "Play Stat : SPACE";
+	}
+
+	void NextGate_R()//맵게이트; 오른쪽으로 넘어가는 문
+	{
+		Set_X(73);
+		Set_Y(15);
+		Gotoxy(Get_X(), Get_Y());
+		cout << "＆";
+	}
+
+	void NextGate_L()//왼쪽으로 넘어가는 문
+	{
+		Set_X(2);
+		Set_Y(10);
+		Gotoxy(Get_X(), Get_Y());
+		cout << "＆";
+	}
+
+	void NextGate_U()
+	{
+		Set_X(35);
+		Set_Y(1);
+		Gotoxy(Get_X(), Get_Y());
+		cout << "＆";
+	}
+
+	void NextGate_D()
+	{
+		Set_X(30);
+		Set_Y(22);
+		Gotoxy(Get_X(), Get_Y());
+		cout << "＆";
+	}
+
+	void City()
+	{
+		Map();
+		npc.Draw();
+
+	}
+
+	void NextStage()
+	{
+		stage();
+
+	}
+
+
+};
+
+</pre>
+</p>
+
+</body>
+</html>

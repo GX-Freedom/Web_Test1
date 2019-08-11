@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title>Open_Code</title>
+  <meta charset="utf-8" />
+</head>
+
+
+<body>
+
+<h1><a href="index.html">WEB</a></h1>
+
+<h2>Open Code</h2>
+
+<ol>
+	<li><a href="LinkedHTML.html">HTML</a></li>
+	<li><a href="LinkedCSS.html">CSS</a></li>
+	<li><a href="LinkedJavaScript.html">JavaScript</a></li>
+	<li><a href="LinkedGames.html">Games</a></li>
+</ol>
+
+<ul>
+	<h2><li><a href="open_code.html">open_code </a></li></h2>
+	<h2><li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li></h2>
+
+</ul>
+
+<p>
+<details>
+<summary><strong>UI.cpp</strong></summary>
+<pre>
+<strong>Nothing</strong>
+</pre>
+</details>
+</p>
+
+<p>
+<details>
+<summary><strong>UI.h</strong></summary>
+<pre>
+#pragma once
+#include <Windows.h>
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include "System.h"
+#include "Monster.h"
+
+using namespace std;
+
+class UI
+{
+
+private:
+	System sy;
+	Monster* mp;
+
+public:
+
+	void Gotoxy(short _a, short _b)//UI 위치값
+	{
+		COORD pos = { _a , _b };
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+	}
+
+	void StateUI()
+	{
+		int _a = 0;
+		int _b = 0;
+		Gotoxy(_a,_b);
+
+		for (int i =25 ; i <= 28; ++i)
+		{
+			for (int j =0 ; j <= 75; ++j)
+			{
+				if ((i > 25 && i < 28) && (j > 0 && j < 75))
+				{
+					cout << " ";
+				}
+				else
+				{
+					cout << "-";
+				}
+
+			}
+			cout << "\n";
+		}
+	}
+
+	void PlayUI(Player* pp)// 플레이어 캐릭터 상태 UI
+	{
+		this->sy.pp = pp;
+		int _x = 80;
+		int _y = 2;
+
+		if (pp->Get_exe() >= pp->Get_Level() * 80)
+		{
+			pp->Set_exe(pp->Get_exe() * 0);
+			pp->Set_Level(pp->Get_Level() + 1);
+			pp->Set_Attack(pp->Get_Attack() + 3);
+			pp->Set_Defence(pp->Get_Defence() + 2);
+			pp->Set_HP(100);
+			pp->Set_HP(pp->Get_HP() + 10 * pp->Get_Level());
+			pp->Set_MP(10);
+			pp->Set_MP(pp->Get_MP() + 7 * pp->Get_Level());
+			pp->Set_gold(pp->Get_gold() + rand() % 300);
+		}
+
+		if (pp->Get_HP() <= 0)
+		{
+			pp->~Player();
+			cout << "YOU DIED\n";
+		}
+		if (pp->Get_Level() == 5 && pp->jp[0] == "beginer")
+		{
+			cout << "상점으로 가서 전직을 하십시오.";
+		}
+		Gotoxy(_x, _y);
+		cout << "플레이어 정보\n";
+		Gotoxy(_x, _y++);
+		Gotoxy(_x, _y++);
+		cout << "이름 : " <<sy.pp->name<< "\n";
+		Gotoxy(_x, _y++);
+		cout << "직업 : " << pp->jp[0] << "\n";
+		Gotoxy(_x, _y++);
+		cout << "레벨:" <<setw(2)<< pp->Get_Level() << "\n";
+		Gotoxy(_x, _y++);
+		cout << "경험치: " << setw(2) << pp->Get_exe() << " / "<<pp->Get_Level()*80<< "\n";
+		Gotoxy(_x, _y++);
+		cout << "HP:" << setw(2) << pp->Get_HP() << "\n";
+		Gotoxy(_x, _y++);
+		cout << "MP:" << setw(2) << pp->Get_MP() << "\n";
+		Gotoxy(_x, _y++);
+		cout << "공격력:" << setw(2) << pp->Get_Attack() << "\n";
+		Gotoxy(_x, _y++);
+		cout << "방어력:" << setw(2) << pp->Get_Defence() << "\n";
+		Gotoxy(_x, _y++);
+		cout << "소지금:" << setw(2) << pp->Get_gold() << "\n";
+	
+	}
+
+	void MonsterUI(Monster* mp)//몬스터 상태 UI
+	{
+		this->sy.mp = mp;
+		int _x = 80;
+		int _y = 13;
+
+		if (mp->Getexe() >= mp->GetLevel()*100)
+		{
+			mp->Setexe(mp->Getexe() * 0);
+			mp->SetLevel(mp->GetLevel() + 1);
+			mp->SetAttack(mp->GetAttack() + 4);
+			mp->SetDefence(mp->GetDefence() + 1);
+			mp->SetHP(100);
+			mp->SetHP(mp->GetHP() + 10*mp->GetLevel());
+			mp->SetMP(5);
+			mp->SetMP(mp->GetMP() + 5);
+		}
+
+		if (mp->GetHP() <= 0)
+		{
+			mp->SetLevel(mp->GetLevel() + 1);
+			mp->Setexe(mp->Getexe() + rand() % 90);
+			mp->SetAttack(mp->GetAttack() + 3);
+			mp->SetDefence(mp->GetDefence() + 2);
+			mp->SetHP(100);
+			mp->SetHP(mp->GetHP() + 10 * mp->GetLevel());
+			mp->SetMP(5);
+			mp->SetMP(mp->GetMP() + 5 * mp->GetLevel());
+		}
+
+		if (mp->GetHP() <= 0)
+		{
+			DestroyMonster(mp);
+		}
+
+		Gotoxy(_x, _y);
+		cout << "몬스터 정보\n";
+		Gotoxy(_x, _y++);
+		cout << "이름:" <<setw(2)<<"고블린"<<"\n";
+		Gotoxy(_x, _y++);
+		cout << "레벨:" << setw(2) <<mp->GetLevel() << "\n";
+		Gotoxy(_x, _y++);
+		cout << "경험치: " << setw(2) << mp->Getexe() << "\n";
+		Gotoxy(_x, _y++);
+		cout << "HP:" << setw(2) <<mp->GetHP() << "\n";
+		Gotoxy(_x, _y++);
+		cout << "MP:" << setw(2) << mp->GetMP() << "\n";
+		Gotoxy(_x, _y++);
+		cout << "공격력:" << setw(2) << mp->GetAttack() << "\n";
+		Gotoxy(_x, _y++);
+		cout << "방어력:" << setw(2) << mp->GetDefence() << "\n";
+
+	}
+
+	void HintUI()
+	{
+		int _x = 80;
+		int _y = 25;
+
+		Gotoxy(_x, _y);
+		cout << "HintUI";
+		Gotoxy(_x, _y++);
+		cout << "＠(마을)";
+		Gotoxy(_x, _y++);
+		cout << "＃(상점)";
+		Gotoxy(_x, _y++);
+		cout << "＆(다음 맵)";
+
+	}
+
+	void DestroyMonster(Monster* mp)
+	{
+		int i = 0;
+		this->sy.mp = mp;
+		mp->~Monster();
+	}
+
+	void buy()
+	{
+
+	}
+};
+
+
+
+</pre>
+</eatails>
+</p>
+</body>
+
+</html>

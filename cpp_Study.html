@@ -1,0 +1,597 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title>Coding Study</title>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+
+<h1><a href="index.html">WEB</a></h1>
+<p>
+<details>
+    <summary> Open Code</summary>
+	<p>
+<ol>
+	<li><a href="LinkedHTML.html">HTML</a></li>
+	<li><a href="LinkedCSS.html">CSS</a></li>
+	<li><a href="LinkedJavaScript.html">JavaScript</a></li>
+	<li><a href="LinkedGames.html">Games</a></li>
+</ol>
+	</p>
+</details>
+</p>
+<p>
+<ul>
+	<h3>Coding Study</h3>
+	<li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li>
+	<li><a href="c_shop.html">C#</a></li>
+	<li><a href="JAVA_code.html">JAVA</a></li>
+	<li><a href="JAVA_script.html">JAVA_Script</a></li>
+	<li><a href="HTML_code.html">HTML</a></li>
+	<li><a href="css_code.html">CSS</a></li>
+</ul>
+</p>
+<br/>
+<p>
+
+C/C++기초 공부하기</br>
+C:절차적(함수와 함수로 이루워진 형태)//생략(?)</br>
+              ↓</br>
+Data 기반 프로그래밍(유지보수 비용 절감)</br>
+              ↓</br>
+C++:객체지향(객체와 객체로 이루워진 형태)</br>
+
+<details>
+<summary><strong>변수</strong></summary>
+<pre>
+<strong>Nothing</strong></br>
+변수: 메모리 저장 공간값(위치, 주소)</br>
+전역변수(외부변수):외부에 선언된 변수 이며(주로 최상단에서 선언) 프로그램이 종료시에 소멸된다.</br>
+지역변수(자동변수):중괄호 안({함수안})에서 생성되며 {함수}가 끝나면 소멸된다.</br>
+동적 변수: 동적으로 할당하여 heep영역에 위치시킨다. malloc과 new가 있다.</br>
+정적 변수: stetic(?)</br>
+</br>
+<strong>변수의 형태및 종류</strong></br></br>
+<strong>일반변수</strong>: int a;<-변수 선언</br>
+----------</br>
+<strong>매개변수</strong> : 외부에서 (오는) 인자를 받는 변수
+void Action(int a)<-매개변수
+{ }</br>
+---------</br>
+<strong>맴버 변수</strong>: class 내부에 선언 된 변수
+class Lady
+{
+	int a;<-맴버 변수
+};</br>
+------------</br>
+<strong>구조체</strong> 변수:
+struct man()
+{ 
+	int a
+}man;
+man a;<-구조체 변수</br>
+-------------</br>
+<strong>객체</strong>: class를 변수로 선언
+class Object
+{
+	int abc;
+};
+Object obj; <-객체
+</br>
+
+</pre>
+</details>
+
+<details>
+<summary><strong>탑입</strong></summary>
+<pre>
+32바이트 컴퓨터에서는 32바이트</br>
+64바이트 컴퓨터에서는 64바이트로 쓰인다.</br>
+10진수와 비교하기 위해 숫자 앞에 0(8진수), 0x(10진수)를 사용
+</br>
+10  //10진수</br>
+010  //8진수</br>
+0x10  //16진수</br>
+</br>
+타입(Type)의 종류</br>
+<strong>정수</strong>:자연수(양의정수)와 0을 포함한 음의 정수를 정수라 부른다.</br>
+ex)... -3, -2, -1, 0, 1, 2, 3 ...</br>
+<strong>정수(integer) 타입</strong></br>
+int(4byte): integer의 약자이며 정수타입에 쓰인다. (범위: )</br>
+short(2byte): int보다 작은 값일 때 사용한다</br>
+long(4byte): </br>
+unsigned: 양수만 보관 정수 타입 앞에 쓰인다. (예: unsigned int)</br>
+</br>
+그외 
+short int(2byte)
+long int(4byte)
+
+
+</br>
+타입은 정수 타입으로 분류 됐으나 실제로(?)는 다른 타입(?)
+char(1byte):캐릭터 형타입 문자를 보관하는데 사용된다.</br>
+wchar_t:언어 표현 때문에 생겨났다.</br>
+bool(1byte): 참(true) 거짓(false)를 구별 하는데 이용 된다.</br>
+
+</br>
+<strong>실수</strong>:소수점(정수와 정수 사이에 있는 무수이 많은 소수점)</br>
+ex)0.000001.....</br>
+<strong>실수(float) 타입</strong></br>
+float(4byte):
+double(8byte):
+long double(16byte?): 실수 길이(정밀도)을 높일 때 사용;
+(void):void타입 (아무것도 없음)</br>
+</pre>
+</details>
+
+<details>
+<summary><strong>연산자</strong></summary>
+<pre>
+연산자의 종류
+</br>
+모든 연산은 연산자 우선순위에 의해서 연산 순서가 정해져 있다.</br>
+<strong>사칙 연산자</strong></br>
++ 덧셈</br>
+- 뺄셈</br>
+* 곱셈</br>
+/ 나눗셈(몫을 제외한 나머지는 버린다.)</br>
+% 나머지(목을 제외한 나머지 값만 가져온다.</br>
+</br>
+<strong>대입 연산자</strong></br>
+
+     a          =        10;</br>
+(피연산자) (대입 연산자) (피연산자)</br>
+(Lvelue)                 (Rvelue)</br>
+오른쪽에서 왼쪽으로 대입을 한다.</br>
+</br>
+<strong>관계 연산자</strong></br>
+a>b a가 b보다 크다.</br>
+a<'b a가 b보다 작다.</br>
+a>=b a가 b보다 크거나 같다.</br>
+a<=b a가 b보다 작거나 같다.</br>
+a!=b a와 b가 같지 않다.</br>
+</br>
+<strong>논리 연산자</strong></br>
+and, or, not</br>
+&&, ||, !=, ==</br>
+and(&&): 두 비교 값이 (두개 다) true인 경우만 true 한개라도 false 라면 false</br>
+or(||): 두 값중 한개만 true라면 true 다른 한개가 false일지라도 한개가 true이면 true</br>
+not(!): 부정  피연산자의 값이 true 이면 false, flase이면 true로 반환한다.</br>
+</br>
+<strong>비트 단위 연산자</strong></br>
+</br>
+<strong>쉬프트 연산자</strong></br>
+</br>
+<strong>연산자 축약</strong></br>
+(축약형)   (같은 의미의 수식)</br>
+a += b;   a = a + b;</br>
+a -= b;   a = a - b;</br>
+a *= b;   a = a * b;</br>
+a /= b;   a = a / b;</br>
+a %= b;   a = a % b;</br>
+a &= b;   a = a & b;</br>
+
+</br>
+</pre>
+</details>
+
+
+<details>
+<summary><strong>분기와 반복</strong></summary>
+<pre>
+조건문과 반복문은 코딩에 있어서 기본이며 가장 많이 쓰인다.(if와 for)</br>
+</br>
+<strong>조건문</strong></br>
+조건문에는 대표적으로 if문과 switch_case가 있다.
+<strong>if문</strong></br>
+if문은 조건을 논리연산자/관계연산자를 사용 하여 분기를 나눈다.
+예)
+if(a == 10)// = = 두개임
+{
+	cout<<"a값은 10입니다.\n";
+}
+위와 같이 a가 10과 같다면 화면에 출력하는 간단한 문구이다.
+
+프로그램이 계속해서 작동한다면 위에서는 if에서 끝나지만 계속해서 분기를 만들어서 이어 갈 수 있다.
+위 if문에 이어서 
+else if(a > 10)
+{
+	cout<<"10보다 크다\n";
+}
+
+이와 같이 if문 다음 계속해서 다른 조건을 걸어서 이어 갈 수 있다.
+마지막으로 이도저도 아닐 경우
+else를 사용 하요 마무리 하면 된다. 
+else{
+	cout<<"10보다 작음\n";
+}
+굳이 else를 사용 하지 않아도 된다.
+else는 if문이 끝날 때 사용 하기 때문에 꼭 마지막에 사용 하는게 좋다.
+또한 if또는 else if를 연속으로 사용 가능하다.
+예)
+if(1){
+
+}
+else if(1)
+{
+
+}
+else if(1)
+{
+
+}
+if(1)
+{
+
+}
+if(1){
+
+}
+else {
+
+}
+이런 식으로도 사용이 가능하다.
+ps.컴퓨터에서는 대부분 0이 false 1이상은 true로 간주한다.(아마도....?);
+</br>
+<strong>switch_case</strong>
+스위치 캐이스 문은 분기별로 정수 타입을 입력 받는다.
+예)
+char select;
+select = _getch();
+cin>>selcet;
+switch(select) //(C# TEXT도 가능)
+{
+	case '1':
+	cout<<"스위치 캐이스\n";
+	break; //<-중요 case 끝에는 꼭 break 즉, 탈출 조건을 달아야된다.
+	case '2':
+	cout<<"이런식으로 정수를 입력받으면 된다."
+	break;
+}
+
+반복문
+
+반복문에는 for와 while이 있다.
+
+<strong>for문</strong>
+for문은  변수, 조건, 변수의 플러스 또는 마이너스의 형식을 갖는다.
+예)
+for(int i = 0; i < 10; i++)
+{
+	cout<< i<<"\n";
+}
+이경우는 9까지 출력 된 후 종료 된다.
+
+<strong>while문</strong>
+while문은 조건을 정하고 조건이 true일 동안 계속해서 반복하는 반복문이다.
+예)
+int i = 0;
+while(i <= 10)
+{
+	i++;
+	cout<< i << "\n";
+}
+이경우 i는 11일 될 때까지 반복에서 실행 된다. 
+
+반복문 또한  조건문인 if문과 같이 연속적으로 반복 시킬 수 있다.
+for(int i = 0; i < 10; i++)
+{
+	for(int j = 0; j < 10; j++)
+	{
+		cout<< "*\n";
+	}
+}
+while(1)
+{
+	for(int i = 0; i < 5; i++)
+	{
+		cout<< i << "\n";
+	}
+}
+
+</br>
+</pre>
+</details>
+
+<details>
+<summary><strong>배열</strong></summary>
+<pre>
+배열: 배열은 동일한 타입의 변수를 메모리상에 연속적으로 모아 놓은 변수이다.
+예)
+int a[5]; int 타입 a의 변수 5개가 만들어졌다.
+[]<-대괄호 안에 해당 변수를 몇개 만들지 정하는 것이다. 
+
+사용은 (0부터 시작)
+초기화 방법 
+
+1)
+a[0] = 1;
+a[1] = 2;
+a[2] = 3;
+a[3] = 4;
+a[4] = 5;
+
+2)b[5] = {0, 1, 2, 3, 4};
+한번에 초기화가 된다.
+
+만약 b[5] = {1, 2}이렇게만 하게 된다면
+b[0], b[1]예 1과 2가 들어가고 나머지는 쓰레기값을 갖게 된다.
+
+또한 배열과 배열끼리 대입이 불가능 하다.
+a = b; //오류
+
+배열의 크기 구하기
+배열의 크기 = 원소의 크기 * 원소의 개수
+
+배열에서 문자열 사용
+문자열이란 문자의 배열을 뜻한다.
+char a = '\0';
+char b = 0;
+문자열의 마지막 문자가 NULL이 아닐 경우 쓰레기 값이 출력 된다.(무한하게 NULL이 나올 때까지)
+
+
+
+</pre>
+</details>
+
+
+
+
+<details>
+<summary><strong>기타 필기</strong></summary>
+<pre>
+// Text_Word
+//필기용
+
+// Text_Word
+//필기용 HTML(리액트 뷰제이에스)
+#include < iostream>
+
+using namespace std;
+//참조 & 사용 
+
+struct TextType
+{
+	int b = 20;
+
+	int func(const int &a) //매개 변수로 주로 사용 
+	{
+	 
+	}
+}Text;
+
+//함수
+
+struct FuncType
+{
+	//함수 코드의 묶음, 메크로, 재사용, 가독성, 구조적(유지,보수)
+	//가장 작은 형태의 함수로 만드는게 좋음
+}Func;
+
+/* 
+동적 메모리 생성
+ p = new Monster;//생성
+ p->a;//초기화
+ delete p;//메모리 해제
+ 
+ Node* Node = (Node*) malloc(sizeof(Node);// 동적 메모리 생성
+ free Node; //메모리 해제 
+
+*/
+
+/*
+문자열과 문자의 배열
+*/
+//객체 지향 이전 절차적 프로그래밍 -> Data기반 프로그래밍(유지보수 비용 증가로 인해 탄생(?) ) --(발전)--> 객체지향 programming 
+/*
+객체 지향 프로그래밍
+
+객체 지향의 3대 속성
+1.다향성 
+2.상속
+3.캡슐화
+
+Object -> 대상(현실/상상)
+추상화 -> 대상을 단순화 또는 필요하는 것을 Data로 뽑아내는 것
+  ↓ 
+Object -> clss화 
+
+class man{
+
+float weight ->속성
+--Data 맴버 변수--
+
+----------------------
+
+void Move()
+{  } <---Acttion 맴버 함수---
+
+----추상화----(필요한 정보)
+
+} <---캡슐화---(class로 묶음)
+
+(↓메모리상에 올라오게 되면 instance 라고도 함(?))
+man a<-객체(object)_ class DataType으로 만들어진 변수를 객체라 부름/
+a.Move();
+
+int a(변수);// 변수:메모리 저장 공간 값(위치, 주소)
+
+struct sos;
+{  }sos;
+sos a; 구조체 변수 
+
+계층간의 구조
+상속, 포함, 참조
+(일반화), (특수화), (다중상속)
+
+계층 관계 is a관계 
+포함 관계 has a 관계(class 안에서 만들고 쓰인경우)
+&, * 참조 관계(외부에서 만든 후 붙인경우)
+
+보여주는 부분(인터페이스(함수))
+
+접근제어
+private:모두 접근 안 됨(본인은 제외)
+protected:(상속)자식은 접근 가능하나 외부에서 접근이 안 됨
+public:모두 접근 가능
+
+다형성
+객체와 객체간의 메세지를 전달하는 방법(함수와 함수 호출)
+같은 메세지의 다른 반응, 오버로딩: 같은 이름의 함수, 인자만 달리 하여 사용
+다형성이 상속관계 일경우 오버라이딩
+
+생성자() 초기화
+기본 생성자:인자를 받지 않는 생성자
+인자를 받는 생성자
+
+~소멸자()
+~(틸드)
+--------------------------------------------------------
+
+class의 정의
+
+class Monster
+{
+
+맴버 변수: 클래스 내부(선언 안)에서 선언한 변수
+맴버 함수: 클래서 내부(선언 안)에서 생성한 함수(구현부와 선언부를 나눠서 사용한다. (보통) )
+인라인 함수: 클래스 내부에서 만들어진 함수
+
+외부에서 만들경우: 선언부와 구현부를 나누어 만들어진다.
+
+void Move(); <-선언
+
+
+};
+
+---main.cpp---
+void Monster::Move()<-구현
+{ 구현부 }
+
+-------------------------------
+Monster a(10);
+
+Monster b = a; <- 복사 생성자( Monster( const Monster &p){}
+ ↑동일↓
+Monater b(a);
+
+얕은 카피 
+깊은 카피
+
+int *p;
+malloc
+new
+
+-----------------
+생성자: 맴버 변수에 참조, 상수형이 있을 경우 생성자를 반드시 만들것.
+
+class Monster
+{
+int &a;
+const int b;
+};
+int b = 20;
+int &a = b; 참조형은 생성(선언)과 동시에 초기화
+
+const int  b = 10; const 형식 선언과 동시에 초기화 
+
+Monster(int pa, int pmax):a(pa),max(pmax)<-생성자 초기화 리스트
+{
+  a = pa;(X)불가능
+  max = pmax;(X)
+}
+int c = 10;
+int k = 5;
+Monster a(c,k);
+
+
+-------------------------
+
+접근 제어 
+class(기본 private)
+struct(기본 public)
+
+class Monster
+{
+private:
+	맴버 변수;(최대한 private으로 만들것)
+protected:
+
+public:
+	맵버 함수;(접근자를 이용하여 public으로 만들어 맴버 변수에 접근 및 함수 생성)
+};
+
+private:모두 접근 안 됨(본인은 제외)
+protected:상속(자식)은 접근 가능하나 외부에서 접근이 안 됨
+public:모두 접근 가능
+
+Monster a; <-객체를 이용하여 접근
+
+------------------------------
+
+
+정적맴버
+
+class Monster{
+
+static int count; <-클래스 변수 한개만 만들어진다.
+
+static CreateMonster() <-클래스 함수 // 맴버 변수 사용 불가 
+{
+	if(200 < count)
+	{
+	  Monster();<-생성
+	}
+}
+
+};
+
+Monster::count; <- 접근 방법;
+
+Monster::CreateMonster();
+
+
+
+*/
+
+
+
+
+/*
+Algorithm
+
+
+
+탐색
+정렬->탐색-> Data를 찾는 것 
+1.순차 탐색
+2.이진 탬색(정렬->탐색 반복 n/2씩 줄어든다)-수정 없이 고정일 경우 괜찮으나 수정이 필요할 경우 좋지 않은 방법이다.
+3.이진 탐색 트리(완전 이진 트리인 경우 '효율'이 좋다.)
+4.자가 균형 트리 (자체적으로 완전 이진 트리를 유지시켜 효율을 높인다.)
+1).레드 블랙(트리):  최소값 노드(/오른쪽/ 노드의 가장 밑의 좌측값)을 찾아 (삭제된 노드)위로 올린다.
+2).AVL(트리):
+
+
+
+우선 순위 큐
+
+Node에 우선순위 값을 준다.
+
+*/
+
+
+</pre>
+</details>
+
+
+</p>
+
+
+
+</body>
+
+
+</html>

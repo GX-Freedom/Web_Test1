@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title>Open_Code</title>
+  <meta charset="utf-8" />
+</head>
+
+
+<body>
+
+<h1><a href="index.html">WEB</a></h1>
+
+<h2>Open Code</h2>
+
+<ol>
+	<li><a href="LinkedHTML.html">HTML</a></li>
+	<li><a href="LinkedCSS.html">CSS</a></li>
+	<li><a href="LinkedJavaScript.html">JavaScript</a></li>
+	<li><a href="LinkedGames.html">Games</a></li>
+</ol>
+
+<ul>
+	<h2><li><a href="open_code.html">open_code </a></li></h2>
+	<h2><li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li></h2>
+
+</ul>
+
+
+<p>
+
+<details>
+<summary><strong>Monster.cpp</strong></summary>
+<pre>
+#include "Monster.h"
+
+Monster::Monster()//몬스터 기본 위치
+{
+	x = 15;
+	y = 15;
+}
+
+
+</pre>
+</details>
+<details>
+    <summary><strong>Monster.h</strong></summary>
+	<pre>
+#pragma once
+#include <iostream>
+#include <Windows.h>
+
+using namespace std;
+
+class Monster
+{
+
+private:
+
+	int Level;
+	int HP;
+	int MP;
+	int Attack;
+	int Defence;
+	int x ;
+	int y ;
+	int exe;
+
+
+	
+
+public:
+	const char monstername[20] = "고블린";
+
+	Monster();
+
+	int GetLevel()
+	{
+		return Level;
+	}
+
+	void SetLevel(int _Level)
+	{
+		Level = _Level;
+	
+	}
+
+	int GetHP()
+	{
+		return HP;
+	}
+
+	void SetHP(int _HP)
+	{
+		HP = _HP;
+	}
+
+	int GetMP()
+	{
+		return MP;
+	}
+
+	void SetMP(int _MP)
+	{
+		MP = _MP;
+	}
+
+	int GetAttack()
+	{
+		return Attack;
+	}
+
+	void SetAttack(int _Attack)
+	{
+		Attack = _Attack;
+	}
+
+	int GetDefence()
+	{
+		return Defence;
+	}
+
+	void SetDefence(int _Defence)
+	{
+		Defence = _Defence;
+	}
+
+	int GetX()
+	{
+		return x;
+	}
+	void SetX(short _x)
+	{
+		x = _x;
+	}
+	int GetY()
+	{
+		return y;
+	}
+	void SetY(short _y)
+	{
+		y = _y;
+	}
+	int Getexe()
+	{
+		return exe;
+	}
+	void Setexe(int _exe)
+	{
+		exe = _exe;
+	}
+
+	void Gotoxy(short x, short y)//몬스터 위치
+	{
+		COORD pos = { x , y };
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+	}
+
+	void Draw(short x, short y)//몬스터 임시
+	{
+		//x = 15;
+		//y = 15;
+		Gotoxy(x, y);
+
+		cout << "㈄";
+	}
+
+	void Draw2(short x, short y)
+	{
+		Gotoxy(x, y);
+		cout << "◈";
+	}
+
+	void moncreate()//몬스터 기초 능력
+	{
+		SetLevel(1);
+		SetHP(100);
+		SetMP(5);
+		SetAttack(10);
+		SetDefence(3);
+		Setexe(0);
+
+	}
+
+	~Monster()
+	{		
+		Gotoxy(30, 3);
+		cout << "몬스터가 죽었습니다.\n";
+		Gotoxy(30, 4);
+		cout << "STAGE CLEAR\n";
+		//Draw2(GetX(), GetY());
+		
+	}
+
+	void Update() {
+		x++;
+		y++;
+	}
+	
+};
+	</pre>
+
+</details>
+</p>
+
+
+</body>
+
+</html>
