@@ -3,35 +3,44 @@
 <html>
 
 <head>
- <title>Open_Code</title>
-  <meta charset="utf-8" />
+    <title>Open_Code</title>
+    <meta charset="utf-8" />
 </head>
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5CHSDM5BD"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-G5CHSDM5BD');
+</script>
 <body>
 
-<h1><a href="index.html">WEB</a></h1>
+    <h1><a href="index.html">WEB</a></h1>
 
-<h2>Open Code</h2>
+    <h2>Open Code</h2>
 
-<ol>
-	<li><a href="LinkedHTML.html">HTML</a></li>
-	<li><a href="LinkedCSS.html">CSS</a></li>
-	<li><a href="LinkedJavaScript.html">JavaScript</a></li>
-	<li><a href="LinkedGames.html">Games</a></li>
-</ol>
+    <ol>
+        <li><a href="LinkedHTML.html">HTML</a></li>
+        <li><a href="LinkedCSS.html">CSS</a></li>
+        <li><a href="LinkedJavaScript.html">JavaScript</a></li>
+        <li><a href="LinkedGames.html">Games</a></li>
+    </ol>
 
-<ul>
-	<h2><li><a href="open_code.html">open_code </a></li></h2>
-	<h2><li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li></h2>
+    <ul>
+        <h2><li><a href="open_code.html">open_code </a></li></h2>
+        <h2><li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li></h2>
 
-</ul>
+    </ul>
 
-<body>
+    <body>
 
-    <p>
-        <details>
-            <summary><strong>Player.cpp</strong></summary>
+        <p>
+            <details>
+                <summary><strong>Player.cpp</strong></summary>
 <pre>
 #include "Player.h"
 
@@ -42,302 +51,302 @@ Player::Player()//플레이어 기본 위치
 }
 
 </pre>
-        </details>
-    </p>
+            </details>
+        </p>
 
-    <p>
-        <details>
-            <summary><strong>Player.h</strong></summary>
-            <pre>
-    <p>
-        #pragma once
+        <p>
+            <details>
+                <summary><strong>Player.h</strong></summary>
+                <pre>
+        <p>
+            #pragma once
 
-        #include <'iostream> // '←지우기
-        #include <'conio.h>
-        #include <'Windows.h>
-        #include <'iomanip>
-        #include <'string>
-        #include "State.h"
-        #include "Monster.h"
-        #include "NPC.h"
-        #include "Stack.h"
-        #include "Maps.h"
+            #include <'iostream> // '←지우기
+            #include <'conio.h>
+            #include <'Windows.h>
+            #include <'iomanip>
+            #include <'string>
+            #include "State.h"
+            #include "Monster.h"
+            #include "NPC.h"
+            #include "Stack.h"
+            #include "Maps.h"
 
-        #define LEFT 75// 좌측방향키
-        #define RIGHT 77// 우측방향키
-        #define UP 72// 위쪽방향키
-        #define DOWN 80// 아래방향키
-        #define SPACE 32//스페이스(선택)
+            #define LEFT 75// 좌측방향키
+            #define RIGHT 77// 우측방향키
+            #define UP 72// 위쪽방향키
+            #define DOWN 80// 아래방향키
+            #define SPACE 32//스페이스(선택)
 
-        using namespace std;
+            using namespace std;
 
-        class Player :
-        public State
-        {
-        private:
+            class Player :
+            public State
+            {
+            private:
 
-        int x ;
-        int y ;
-        int oldx;
-        int oldy;
+            int x ;
+            int y ;
+            int oldx;
+            int oldy;
 
-        //CMonster* mp;
-        int Count = 0;
-        int iCount[3] = { 0 };//포션 수량
-        string Slot[6] = { "빈 슬롯","파워 슬레쉬", "공격력 증가", "방어력 증가", "헬 파이어", "텔레포트" };//플레이어 스킬
+            //CMonster* mp;
+            int Count = 0;
+            int iCount[3] = { 0 };//포션 수량
+            string Slot[6] = { "빈 슬롯","파워 슬레쉬", "공격력 증가", "방어력 증가", "헬 파이어", "텔레포트" };//플레이어 스킬
 
-        //플레이어 움직임 좌표
-        int XMAX = 73;//73
-        int YMAX = 23;//23
-        int XMIN = 0;//0
-        int YMIN = 0;//0
-        bool xdirect = true;
-        bool ydirect = true;
-        //플레이어 움직임 좌표;
-        string _job[5]{ "beginer", "knight", "warrior" , "archer" , "magician" };
+            //플레이어 움직임 좌표
+            int XMAX = 73;//73
+            int YMAX = 23;//23
+            int XMIN = 0;//0
+            int YMIN = 0;//0
+            bool xdirect = true;
+            bool ydirect = true;
+            //플레이어 움직임 좌표;
+            string _job[5]{ "beginer", "knight", "warrior" , "archer" , "magician" };
 
-        public:
+            public:
 
-        string* jp = _job;
-        string name;
-        string* ssp = Slot; //스킬 슬롯 포인터
-        NPC* np;
-        Maps* msp;
+            string* jp = _job;
+            string name;
+            string* ssp = Slot; //스킬 슬롯 포인터
+            NPC* np;
+            Maps* msp;
 
-        Player();
+            Player();
 
-        ~Player()
-        {
-        msp->City();
-        Set_exe(Get_exe() * 0);
-        Set_HP(100);
-        Set_HP(Get_HP() + 10 * Get_Level());
-        Set_MP(10);
-        Set_MP(Get_MP() + 7 * Get_Level());
-        }
+            ~Player()
+            {
+            msp->City();
+            Set_exe(Get_exe() * 0);
+            Set_HP(100);
+            Set_HP(Get_HP() + 10 * Get_Level());
+            Set_MP(10);
+            Set_MP(Get_MP() + 7 * Get_Level());
+            }
 
-        int GetX()
-        {
-        return x;
-        }
-        void SetX(short _x)
-        {
-        this->x = _x;
-        }
-        short GetY()
-        {
-        return y;
-        }
-        void SetY(short _y)
-        {
-        this->y = _y;
-        }
+            int GetX()
+            {
+            return x;
+            }
+            void SetX(short _x)
+            {
+            this->x = _x;
+            }
+            short GetY()
+            {
+            return y;
+            }
+            void SetY(short _y)
+            {
+            this->y = _y;
+            }
 
-        void Gotoxy(short x, short y)
-        {
-        COORD pos = { x , y };
-        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
-        }
+            void Gotoxy(short x, short y)
+            {
+            COORD pos = { x , y };
+            SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+            }
 
-        void Draw(short x, short y)//캐릭터 임시
-        {
-        Gotoxy(x, y);
-        cout << "★";
-        }
+            void Draw(short x, short y)//캐릭터 임시
+            {
+            Gotoxy(x, y);
+            cout << "★";
+            }
 
-        void Move()//플레이어 캐릭터 움직임
-        {
-        int nSelect = 0;
-        int count;//이동 거리
-        count = 3 * Get_Level();
+            void Move()//플레이어 캐릭터 움직임
+            {
+            int nSelect = 0;
+            int count;//이동 거리
+            count = 3 * Get_Level();
 
-        Gotoxy(1, 25);
-        cout << "이동 취소 및 완료 아무키나 누르시오.\n";
+            Gotoxy(1, 25);
+            cout << "이동 취소 및 완료 아무키나 누르시오.\n";
 
-        while (1)
-        {
-        if (_kbhit())
-        {
-        // 위아래 23 좌우 74 밑에 xy값 조건 설정하기
-        nSelect = _getch();
-        if (nSelect == 224)
-        {
-        nSelect = _getch();
-        switch (nSelect)
-        {
+            while (1)
+            {
+            if (_kbhit())
+            {
+            // 위아래 23 좌우 74 밑에 xy값 조건 설정하기
+            nSelect = _getch();
+            if (nSelect == 224)
+            {
+            nSelect = _getch();
+            switch (nSelect)
+            {
 
-        case UP://UP
-        if (count > 0)
-        {
-        y--;
-        count--;
-        }
-        else if (count == 0)
-        {
-        cout << "이동 완료(SPACE).\n";
-        }
-        break;
-        case DOWN://DOWN
-        if (count > 0)
-        {
-        y++;
-        count--;
-        }
-        else if (count == 0)
-        {
-        cout << "이동 완료(SPACE).\n";
-        }
-        break;
-        case LEFT://LEFT
-        if (count > 0)
-        {
-        x--;
-        count--;
-        }
-        else if (count == 0)
-        {
-        cout << "이동 완료(SPACE).\n";
-        }
-        break;
-        case RIGHT://RIGHT
-        if (count > 0)
-        {
-        x++;
-        count--;
-        }
-        else if (count == 0)
-        {
-        cout << "이동 완료(SPACE).\n";
-        }
-        break;
-        case SPACE://SPASE
-        break;
-        }
+            case UP://UP
+            if (count > 0)
+            {
+            y--;
+            count--;
+            }
+            else if (count == 0)
+            {
+            cout << "이동 완료(SPACE).\n";
+            }
+            break;
+            case DOWN://DOWN
+            if (count > 0)
+            {
+            y++;
+            count--;
+            }
+            else if (count == 0)
+            {
+            cout << "이동 완료(SPACE).\n";
+            }
+            break;
+            case LEFT://LEFT
+            if (count > 0)
+            {
+            x--;
+            count--;
+            }
+            else if (count == 0)
+            {
+            cout << "이동 완료(SPACE).\n";
+            }
+            break;
+            case RIGHT://RIGHT
+            if (count > 0)
+            {
+            x++;
+            count--;
+            }
+            else if (count == 0)
+            {
+            cout << "이동 완료(SPACE).\n";
+            }
+            break;
+            case SPACE://SPASE
+            break;
+            }
 
-        if ((GetX() <= XMIN || GetX() >= XMAX) || (GetY() <= YMIN || GetY() >= YMAX))//맵 범위 안에서만 움직임
-        {
-        if (GetX() <= XMIN)
-        {
-        xdirect = 1;
-        x = 1;
-        }
-        if (GetX() >= XMAX)
-        {
-        xdirect = 0;
-        x = 73;
-        }
-        if (GetY() <= YMIN)
-        {
-        ydirect = 1;
-        y = 1;
-        }
-        if (GetY() >= YMAX)
-        {
-        ydirect = 0;
-        y = 22;
-        }
+            if ((GetX() <= XMIN || GetX() >= XMAX) || (GetY() <= YMIN || GetY() >= YMAX))//맵 범위 안에서만 움직임
+            {
+            if (GetX() <= XMIN)
+            {
+            xdirect = 1;
+            x = 1;
+            }
+            if (GetX() >= XMAX)
+            {
+            xdirect = 0;
+            x = 73;
+            }
+            if (GetY() <= YMIN)
+            {
+            ydirect = 1;
+            y = 1;
+            }
+            if (GetY() >= YMAX)
+            {
+            ydirect = 0;
+            y = 22;
+            }
 
-        }
+            }
 
-        //	msp->Set_X(rand() % 35);
-        //	msp->Set_Y(rand() % 35);
+            //	msp->Set_X(rand() % 35);
+            //	msp->Set_Y(rand() % 35);
 
-        /*	if ((GetX() >= msp->Get_X() && GetX() <= msp->Get_X()) && (GetY() >= msp->Get_Y() && GetY() <= msp->Get_Y() ))//블럭 만났을시 이동 불가 표현(?);
-        {
-        if (GetX() <= msp->Get_X())
-        {
-        xdirect = 1;
-        x--;
-        }
-        if (GetX() >= msp->Get_X())
-        {
-        xdirect = 0;
-        x++;
-        }
-        if (GetY() <= msp->Get_Y())
-        {
-        ydirect = 1;
-        y--;
-        }
-        if (GetY() >= msp->Get_Y())
-        {
-        ydirect = 0;
-        y++;
-        }
-        }
-        */
+            /*	if ((GetX() >= msp->Get_X() && GetX() <= msp->Get_X()) && (GetY() >= msp->Get_Y() && GetY() <= msp->Get_Y() ))//블럭 만났을시 이동 불가 표현(?);
+            {
+            if (GetX() <= msp->Get_X())
+            {
+            xdirect = 1;
+            x--;
+            }
+            if (GetX() >= msp->Get_X())
+            {
+            xdirect = 0;
+            x++;
+            }
+            if (GetY() <= msp->Get_Y())
+            {
+            ydirect = 1;
+            y--;
+            }
+            if (GetY() >= msp->Get_Y())
+            {
+            ydirect = 0;
+            y++;
+            }
+            }
+            */
 
 
-        }
-        else if ((GetX() == 22 && GetY() ==2)&&SPACE)//마을 이동
-        {
-        cout << "마을로 이동 합니다.";
-        msp->City();
-        count = 15;
-        }
-        else if ((GetX() == 22 && GetY() == 10) && SPACE)//상점 사용;
-        {
-        Shop();
-        }
-        else if ((GetX() == 73 && GetY() == 15) && SPACE)//다음 맵으로 이동
-        {
-        msp->NewMaps();
-        }
-        else if ((GetX() == 2 && GetY() == 10) && SPACE)
-        {
-        msp->NewMaps();
-        }
-        else if ((GetX() == 35 && GetY() == 1) && SPACE)
-        {
-        msp->NewMaps();
-        }
-        else if ((GetX() == 30 && GetY() == 22) && SPACE)
-        {
-        msp->NewMaps();
-        }
-        else
-        {
-        break;
-        }
-        //SetX(x);
-        //SetY(y);
-        Draw(GetX(), GetY());
-        }
-        }
-        }
+            }
+            else if ((GetX() == 22 && GetY() ==2)&&SPACE)//마을 이동
+            {
+            cout << "마을로 이동 합니다.";
+            msp->City();
+            count = 15;
+            }
+            else if ((GetX() == 22 && GetY() == 10) && SPACE)//상점 사용;
+            {
+            Shop();
+            }
+            else if ((GetX() == 73 && GetY() == 15) && SPACE)//다음 맵으로 이동
+            {
+            msp->NewMaps();
+            }
+            else if ((GetX() == 2 && GetY() == 10) && SPACE)
+            {
+            msp->NewMaps();
+            }
+            else if ((GetX() == 35 && GetY() == 1) && SPACE)
+            {
+            msp->NewMaps();
+            }
+            else if ((GetX() == 30 && GetY() == 22) && SPACE)
+            {
+            msp->NewMaps();
+            }
+            else
+            {
+            break;
+            }
+            //SetX(x);
+            //SetY(y);
+            Draw(GetX(), GetY());
+            }
+            }
+            }
 
-        void PlayerCreate()//플레이어 기본 능력
-        {
-        Set_HP(100);//플레이어 HP
-        Set_MP(10);//플레이어 MP
-        Set_Attack(10);//공격력
-        Set_Defence(5);//방어력
-        Set_Level(5);//레벨
-        Set_exe(0);
-        Set_gold(1500);
-        jp[0] = "beginer";//직업
+            void PlayerCreate()//플레이어 기본 능력
+            {
+            Set_HP(100);//플레이어 HP
+            Set_MP(10);//플레이어 MP
+            Set_Attack(10);//공격력
+            Set_Defence(5);//방어력
+            Set_Level(5);//레벨
+            Set_exe(0);
+            Set_gold(1500);
+            jp[0] = "beginer";//직업
 
-        //int HPMAX = Get_HP();//최대 HP;
-        }
+            //int HPMAX = Get_HP();//최대 HP;
+            }
 
-        void NewCha()//새로운 캐릭터 생성
-        {
-        int _x = 77;
-        int _y = 3;
+            void NewCha()//새로운 캐릭터 생성
+            {
+            int _x = 77;
+            int _y = 3;
 
-        Gotoxy(_x, _y);
-        cout << setw(5) << "이름을 입력 하세요: " << "\n";
+            Gotoxy(_x, _y);
+            cout << setw(5) << "이름을 입력 하세요: " << "\n";
 
-        Gotoxy(_x = 97, _y);
-        cin >> name;
+            Gotoxy(_x = 97, _y);
+            cin >> name;
 
-        PlayerCreate();
-        //직업
+            PlayerCreate();
+            //직업
 
-        Sleep(300);
-        Gotoxy(_x, _y++);
-        cout << setw(5) << "name: " << name << "\n";
-        //cout << "JOB: " <<job<< "\n";
+            Sleep(300);
+            Gotoxy(_x, _y++);
+            cout << setw(5) << "name: " << name << "\n";
+            //cout << "JOB: " <<job<< "\n";
 		Gotoxy(_x, _y++);
 		cout << "직업:" << jp[0] << "\n";
 		Gotoxy(_x, _y++);
@@ -799,29 +808,29 @@ Player::Player()//플레이어 기본 위치
 		}
 	}
 };
-    </p>
-    </pre>
-    </details>
-    <div id="disqus_thread"></div>
-    <script>
+        </p>
+        </pre>
+        </details>
+        <div id="disqus_thread"></div>
+        <script>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://web1-r8ownsi0f5.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</body>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://web1-r8ownsi0f5.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </body>
 
 </html>

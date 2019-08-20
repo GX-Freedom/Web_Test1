@@ -2,87 +2,92 @@
 
 <hteml>
 
-<script>
-var name;
-document.body.style.backgroundColor = "green";
+    <script>
+        var name;
+        document.body.style.backgroundColor = "green";
 
-function Color(type){
+        function Color(type) {
 
-	if(type == 0)
-	{
-	document.body.style.backgroundColor = "white";
-	}
+            if (type == 0) {
+                document.body.style.backgroundColor = "white";
+            }
 
-	else if(type == 1)
-	{
-	document.body.style.backgroundColor = "red";
-	}
-	else
-	{
-		document.body.style.backgroundColor = "name";
-	}
-}
+            else if (type == 1) {
+                document.body.style.backgroundColor = "red";
+            }
+            else {
+                document.body.style.backgroundColor = "name";
+            }
+        }
 
-function textcolor(name)
-{
-	
-	document.body.style.backgroundColor = "name";
+        function textcolor(name) {
 
-}
+            document.body.style.backgroundColor = "name";
+
+        }
 
 
-</script>
+    </script>
 
 
-<head>
- <title>JAVA_Script</title>
-  <meta charset="utf-8" />
-</head>
+    <head>
+        <title>JAVA_Script</title>
+        <meta charset="utf-8" />
+    </head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5CHSDM5BD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-G5CHSDM5BD');
+    </script>
+
+    <body>
+
+        <h1><a href="index.html">WEB</a></h1>
+
+        <h2>Open Code</h2>
+
+        <ol>
+            <li><a href="LinkedHTML.html">HTML</a></li>
+            <li><a href="LinkedCSS.html">CSS</a></li>
+            <li><a href="LinkedJavaScript.html">JavaScript</a></li>
+            <li><a href="LinkedGames.html">Games</a></li>
+        </ol>
+
+        <ul>
+            <h3> <a href="open_code.html">open code</a></h3>
+            <li><a href="c_cpp_code.html">>C/C++</a></li>
+            <li><a /*href="c_shop.html"*/ onclick=alert("미구현") >C#</a></li>
+            <li><a /*href="JAVA_code.html"*/ onclick=alert("미구현") >JAVA</a></li>
+            <li><a href="JAVA_Script.html">JAVA_Script</a></li>
+            <li><a /*href="HTML_code.html"*/ onclick=alert("미구현") >HTML</a></li>
+            <li><a /*href="css_code.html"*/ onclick=alert("미구현") >CSS</a></li>
+
+        </ul>
+
+        <p><strong>test</strong></p>
+
+        <input type="button" value="alert_no" onclick=alert("no")>
+        <br />
+        <input type="button" value="white" onclick=Color(0);>
+        <br />
+        <input type="button" value="red" onclick=Color(1);>
+        <br />
+        <input type="text" value="" name="text">
+        <input type="submit" value="적용" onclick=alert("완료")>
+        <br />
+        <input name="button" style="background-color:purple;border-color:red; font-color:pink; font-face:굴림;font-size:9pt;">
+        <br />
+        <br />
+        <input type="password" value="" onclick=Color(name) style="background=color:red;border-color:yellow;font-face:굴림;font-size:10pt;">
+        <br />
+        <input type="text" value="" name="text" onclick=textcolor(name);> <a onclick=alert("적용")> </a>
 
 
-<body>
-
-<h1><a href="index.html">WEB</a></h1>
-
-<h2>Open Code</h2>
-
-<ol>
-	<li><a href="LinkedHTML.html">HTML</a></li>
-	<li><a href="LinkedCSS.html">CSS</a></li>
-	<li><a href="LinkedJavaScript.html">JavaScript</a></li>
-	<li><a href="LinkedGames.html">Games</a></li>
-</ol>
-
-<ul>
-	<h3> <a href="open_code.html">open code</a></h3>
-	<li><a href="c_cpp_code.html">>C/C++</a></li>
-	<li><a /*href="c_shop.html"*/ onclick=alert("미구현") >C#</a></li>
-	<li><a /*href="JAVA_code.html"*/ onclick=alert("미구현") >JAVA</a></li>
-	<li><a href="JAVA_Script.html">JAVA_Script</a></li>
-	<li><a /*href="HTML_code.html"*/ onclick=alert("미구현") >HTML</a></li>
-	<li><a /*href="css_code.html"*/ onclick=alert("미구현") >CSS</a></li>
-	
-</ul>
-
-<p><strong>test</strong></p>
-
-<input type="button" value="alert_no" onclick=alert("no")>
-<br/>
-<input type="button" value="white" onclick=Color(0);>
-<br/>
-<input type="button" value="red" onclick=Color(1);>
-<br/>
-<input type = "text" value="" name="text" >
-<input type = "submit" value="적용" onclick=alert("완료")>
-<br/>
-<input name="button" style="background-color:purple;border-color:red; font-color:pink; font-face:굴림;font-size:9pt;" >
-<br/>
-<br/>
-<input type="password" value="" onclick=Color(name) style="background=color:red;border-color:yellow;font-face:굴림;font-size:10pt;">
-<br/>
-<input type="text" value="" name="text" onclick=textcolor(name);> <a onclick=alert("적용")> </a>
-
-
-</body>
+    </body>
 
 </hteml>

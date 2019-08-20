@@ -3,49 +3,59 @@
 <html>
 
 <head>
- <title>Coding Study</title>
-  <meta charset="utf-8" />
+    <title>Coding Study</title>
+    <meta charset="utf-8" />
 </head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5CHSDM5BD"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-G5CHSDM5BD');
+</script>
 
 <body>
 
-<h1><a href="index.html">WEB</a></h1>
-<p>
-<details>
-    <summary> Open Code</summary>
-	<p>
-<ol>
-	<li><a href="LinkedHTML.html">HTML</a></li>
-	<li><a href="LinkedCSS.html">CSS</a></li>
-	<li><a href="LinkedJavaScript.html">JavaScript</a></li>
-	<li><a href="LinkedGames.html">Games</a></li>
-</ol>
-	</p>
-</details>
-</p>
-<p>
-<ul>
-	<h3>Coding Study</h3>
-	<li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li>
-	<li><a href="c_shop.html">C#</a></li>
-	<li><a href="JAVA_code.html">JAVA</a></li>
-	<li><a href="JAVA_Script.html">JAVA_Script</a></li>
-	<li><a href="HTML_code.html">HTML</a></li>
-	<li><a href="css_code.html">CSS</a></li>
-</ul>
-</p>
-<br/>
-<p>
+    <h1><a href="index.html">WEB</a></h1>
+    <p>
+        <details>
+            <summary> Open Code</summary>
+    <p>
+        <ol>
+            <li><a href="LinkedHTML.html">HTML</a></li>
+            <li><a href="LinkedCSS.html">CSS</a></li>
+            <li><a href="LinkedJavaScript.html">JavaScript</a></li>
+            <li><a href="LinkedGames.html">Games</a></li>
+        </ol>
+    </p>
+    </details>
+    </p>
+    <p>
+        <ul>
+            <h3>Coding Study</h3>
+            <li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li>
+            <li><a href="c_shop.html">C#</a></li>
+            <li><a href="JAVA_code.html">JAVA</a></li>
+            <li><a href="JAVA_Script.html">JAVA_Script</a></li>
+            <li><a href="HTML_code.html">HTML</a></li>
+            <li><a href="css_code.html">CSS</a></li>
+        </ul>
+    </p>
+    <br />
+    <p>
 
-C/C++기초 공부하기</br>
-C:절차적(함수와 함수로 이루워진 형태)//생략(?)</br>
-              ↓</br>
-Data 기반 프로그래밍(유지보수 비용 절감)</br>
-              ↓</br>
-C++:객체지향(객체와 객체로 이루워진 형태)</br>
+        C/C++기초 공부하기</br>
+        C:절차적(함수와 함수로 이루워진 형태)//생략(?)</br>
+        ↓</br>
+        Data 기반 프로그래밍(유지보수 비용 절감)</br>
+        ↓</br>
+        C++:객체지향(객체와 객체로 이루워진 형태)</br>
 
-<details>
-<summary><strong>변수</strong></summary>
+        <details>
+            <summary><strong>변수</strong></summary>
 <pre>
 <strong>Nothing</strong></br>
 변수: 메모리 저장 공간값(위치, 주소)</br>
@@ -74,7 +84,7 @@ class Lady
 ------------</br>
 <strong>구조체</strong> 변수:
 struct man()
-{ 
+{
 	int a
 }man;
 man a;<-구조체 변수</br>
@@ -88,10 +98,10 @@ Object obj; <-객체
 </br>
 
 </pre>
-</details>
+        </details>
 
-<details>
-<summary><strong>탑입</strong></summary>
+        <details>
+            <summary><strong>탑입</strong></summary>
 <pre>
 32바이트 컴퓨터에서는 32바이트</br>
 64바이트 컴퓨터에서는 64바이트로 쓰인다.</br>
@@ -130,10 +140,10 @@ double(8byte):
 long double(16byte?): 실수 길이(정밀도)을 높일 때 사용;
 (void):void타입 (아무것도 없음)</br>
 </pre>
-</details>
+        </details>
 
-<details>
-<summary><strong>연산자</strong></summary>
+        <details>
+            <summary><strong>연산자</strong></summary>
 <pre>
 연산자의 종류
 </br>
@@ -181,11 +191,11 @@ a &= b;   a = a & b;</br>
 
 </br>
 </pre>
-</details>
+        </details>
 
 
-<details>
-<summary><strong>분기와 반복</strong></summary>
+        <details>
+            <summary><strong>분기와 반복</strong></summary>
 <pre>
 조건문과 반복문은 코딩에 있어서 기본이며 가장 많이 쓰인다.(if와 for)</br>
 </br>
@@ -252,8 +262,8 @@ switch(select) //(C# TEXT도 가능)
 	case '1':
 	cout<<"스위치 캐이스\n";
 	break; //<-중요 case 끝에는 꼭 break 즉, 탈출 조건을 달아야된다.
-	case '2':
-	cout<<"이런식으로 정수를 입력받으면 된다."
+                 case '2' :
+                 cout<<"이런식으로 정수를 입력받으면 된다."
 	break;
 }
 
@@ -279,7 +289,7 @@ while(i <= 10)
 	i++;
 	cout<< i << "\n";
 }
-이경우 i는 11일 될 때까지 반복에서 실행 된다. 
+이경우 i는 11일 될 때까지 반복에서 실행 된다.
 
 반복문 또한  조건문인 if문과 같이 연속적으로 반복 시킬 수 있다.
 for(int i = 0; i < 10; i++)
@@ -299,34 +309,29 @@ while(1)
 
 </br>
 </pre>
-</details>
+        </details>
 
-<details>
-<summary><strong>배열</strong></summary>
+        <details>
+            <summary><strong>배열</strong></summary>
 <pre>
 배열: 배열은 동일한 타입의 변수를 메모리상에 연속적으로 모아 놓은 변수이다.
 예)
 int a[5]; int 타입 a의 변수 5개가 만들어졌다.
-[]<-대괄호 안에 해당 변수를 몇개 만들지 정하는 것이다. 
-
-사용은 (0부터 시작)
-초기화 방법 
-
-1)
-a[0] = 1;
-a[1] = 2;
-a[2] = 3;
-a[3] = 4;
-a[4] = 5;
-
-2)b[5] = {0, 1, 2, 3, 4};
-한번에 초기화가 된다.
-
-만약 b[5] = {1, 2}이렇게만 하게 된다면
-b[0], b[1]예 1과 2가 들어가고 나머지는 쓰레기값을 갖게 된다.
-
-또한 배열과 배열끼리 대입이 불가능 하다.
-a = b; //오류
+[]<-대괄호 안에 해당 변수를 몇개 만들지 정하는 것이다.
+        사용은 (0부터 시작)
+        초기화 방법
+        1)
+        a[0]=1;
+        a[1]=2;
+        a[2]=3;
+        a[3]=4;
+        a[4]=5;
+        2)b[5]={0, 1, 2, 3, 4};
+        한번에 초기화가 된다.
+        만약 b[5]={1, 2}이렇게만 하게 된다면
+        b[0], b[1]예 1과 2가 들어가고 나머지는 쓰레기값을 갖게 된다.
+        또한 배열과 배열끼리 대입이 불가능 하다.
+        a=b; //오류
 
 배열의 크기 구하기
 배열의 크기 = 원소의 크기 * 원소의 개수
@@ -340,12 +345,12 @@ char b = 0;
 
 
 </pre>
-</details>
+        </details>
 
 
 
-<details>
-<summary><strong>구조체</strong></summary>
+        <details>
+            <summary><strong>구조체</strong></summary>
 <pre>
 구조체: 여러가지 타입(변수)의 정보를 모아 놓은 곳
 예)
@@ -358,42 +363,36 @@ struct Monster
 }Monster;
 
 Monster a;<-구조체 변수
-
-구조체는 사용자 정의 타입이라고도 한다.
-구조체에 내부에 있는 변수들을 맴버 또는 맴버 변수라고 부른다.
-
-a.Attack;
-a: 구조체 변수의 이름
-.(dot):구조체 맴버변수에 접근
-Attack: 구조체 맴버변수
-
-구조체 초기화
-구조체 초기화는 매별을 초기화 하던 방법과 비슷한 방법으로 사용 하면 된다.
-Monster b = {10, 5, 20};
-각각 b.Attack = 10; b.Defencs = 5; b.Health = 20; 이것과 동일하다.
-
-구조체 대입
-구조체 대입은 구조체 변수끼리 대입을 뜻한다.
-같은 구조체 타입의 변수끼리 대입하게 되면 각 맴버 변수의 값이 복사된다.
-
-a = b; 
-b에 있는 값이  a로 복사되서 대입 된다.(얕은 카피)
-
-구조체 동시 정의
-struct toy
-{
-	int a;
-	int b;
-}t1 = {10, 5}, t2;
+                구조체는 사용자 정의 타입이라고도 한다.
+                구조체에 내부에 있는 변수들을 맴버 또는 맴버 변수라고 부른다.
+                a.Attack;
+                a: 구조체 변수의 이름
+                .(dot):구조체 맴버변수에 접근
+                Attack: 구조체 맴버변수
+                구조체 초기화
+                구조체 초기화는 매별을 초기화 하던 방법과 비슷한 방법으로 사용 하면 된다.
+                Monster b={10, 5, 20};
+                각각 b.Attack=10; b.Defencs=5; b.Health=20; 이것과 동일하다.
+                구조체 대입
+                구조체 대입은 구조체 변수끼리 대입을 뜻한다.
+                같은 구조체 타입의 변수끼리 대입하게 되면 각 맴버 변수의 값이 복사된다.
+                a=b;
+                b에 있는 값이 a로 복사되서 대입 된다.(얕은 카피)
+                구조체 동시 정의
+                struct toy
+                {
+                int a;
+                int b;
+                }t1={10, 5}, t2;
 //구조체 toy의 변수 t1과 t2를 동시 정의 했다.(현재 t2값은 쓰레기 값이다.)
 
 t2 = t1; // (t1값을 t2에 대입 (얕은 카피));
 
 </pre>
-</details>
+        </details>
 
-<details>
-<summary><strong>포인터</strong></summary>
+        <details>
+            <summary><strong>포인터</strong></summary>
 <pre>
 <strong>포인터</strong>: 포인터는 다른 변수(또는 함수)의 위치(주소 값)를 가르킨다.(메모리상의)
 포인터는 변수를 가르키는 변수 포인터, 함수를 가르키는 함수 포인터가 있다.
@@ -418,12 +417,12 @@ pb++; // bp = &b[1]를 가르킨다.
 포인터를 바로 사용 하지 않을 경우 포인트 값을 NULL로 초기화 해주는게 좋다.
 
 </pre>
-</details>
+        </details>
 
 
 
-<details>
-<summary><strong>const</strong></summary>
+        <details>
+            <summary><strong>const</strong></summary>
 <pre>
 const는 변수의 값을 변경하지 않을 때 사용한다.
 
@@ -469,11 +468,11 @@ const int* const p = i;
 
 
 </pre>
-</details>
+        </details>
 
 
-<details>
-<summary><strong>복합타입</strong></summary>
+        <details>
+            <summary><strong>복합타입</strong></summary>
 <pre>
 <stron>공용체</strong>
 
@@ -554,16 +553,16 @@ int a = 1;
 int* pa = &a;(포인터)//int타입 포인터 pa &a를 가르킨다.
 int** ppa = &pa;(포인터의 포인터)//int타입 포인터의 포인터 ppa &pa를 가르킨다.
 사용 방법은 일반적인 포인터와 동일 하다.
-단지, 포인터 변수를 받는 포인터라 하여 
+단지, 포인터 변수를 받는 포인터라 하여
 포인터의 포인터라 한다.
 
 
 </pre>
-</details>
+        </details>
 
 
-<details>
-<summary><strong>함수</strong></summary>
+        <details>
+            <summary><strong>함수</strong></summary>
 <pre>
 
 함수의 특징: 재사용
@@ -739,12 +738,12 @@ Type1이 2개 Type2가 1개 생성됐다.
 
 
 </pre>
-</details>
+        </details>
 
 
 
-<details>
-<summary><strong>동적 메모리 할당</strong></summary>
+        <details>
+            <summary><strong>동적 메모리 할당</strong></summary>
 <pre>
 
 동적 메모리 할당이란 메모리상의 heep영역에 위치한다.
@@ -766,20 +765,20 @@ delete NewNode;//메모리 해제
 
 
 </pre>
-</details>
+        </details>
 
-<details>
-<summary><strong>문자열</strong></summary>
+        <details>
+            <summary><strong>문자열</strong></summary>
 <pre>
 string(문자열)과 char(문자)
 가장 큰 차이는 NULL이 있냐 없냐의차이다.
 문자열에는 NULL이 있고 문자에는 없다.
 </pre>
-</details>
+        </details>
 
 
-<details>
-<summary><strong>헤더파일 구현파일</strong></summary>
+        <details>
+            <summary><strong>헤더파일 구현파일</strong></summary>
 <pre>
 #include <>//기본적으로 재공하는 템플릿
 #include "파일명.h"//사용자가 만든 헤더파일
@@ -803,21 +802,21 @@ string(문자열)과 char(문자)
 한번 쓰는 걸로도 된다.(최상단에다가 쓰면 된다.);
 
 </pre>
-</details>
+        </details>
 
 
-<details>
-<summary><strong>클래스(객체)</strong></summary>
+        <details>
+            <summary><strong>클래스(객체)</strong></summary>
 <pre>
 <strong>클래스</strong>
 클래스 기본 구조:
 클래스의 기본 구조는 구조체의 기본 구조와 비슷하다.(역할 또한 비슷하다.)
 예)(↓clss 키워드로 정의)
 class Luck<-클래스 명
-{   
+                {
      //접근 제어
 	private: int a; <-비공개(누구도 접근 할 수 없다.)
-	protected: float b; <-자식클래스만 공개(상속받은 클래스만 사용 가능하다.)
+                           protected: float b; <-자식클래스만 공개(상속받은 클래스만 사용 가능하다.)
 	public: void func(); <-공개(외부에서 누구나 접근이 가능하다.)
 	//클래스 내부의 변수, 함수를 맴버 변수와 맴버 함수라 부른다.
 
@@ -825,7 +824,7 @@ class Luck<-클래스 명
 객체:
 객체란 쉽게 말하면 클래스 변수를 뜻한다.
 예)
-Luck lu; <-객체 생성 
+Luck lu; <-객체 생성
 li.func(); <-객체를 사용한 함수 사용(객체지향으 일부(?));
 
 <strong>생성자와 소멸자</strong>
@@ -844,10 +843,10 @@ Rule::Rule()//생성자 정의
 ~Rule(); //소멸자 호출
 
 </pre>
-</details>
+        </details>
 
-<details>
-<summary><strong>객체지향 programming</strong></summary>
+        <details>
+            <summary><strong>객체지향 programming</strong></summary>
 <pre>
 //객체 지향 이전 절차적 프로그래밍 -> Data기반 프로그래밍(유지보수 비용 증가로 인해 탄생(?) ) 
 --(발전)--> 객체지향 programming 
@@ -871,10 +870,8 @@ float weight ->속성
 
 void Move()
 {  } <---Acttion 맴버 함수---
-
-----추상화----(필요한 정보)
-
-} <---캡슐화---(class로 묶음)
+                 ----추상화----(필요한 정보)
+                 } <---캡슐화---(class로 묶음)
 
 
 (↓메모리상에 올라오게 되면 instance 라고도 함(?))
@@ -885,13 +882,13 @@ int a(변수);// 변수:메모리 저장 공간 값(위치, 주소)
 
 struct sos;
 {  }sos;
-sos a; 구조체 변수 
+sos a; 구조체 변수
 
 계층간의 구조
 상속, 포함, 참조
 (일반화), (특수화), (다중상속)
 
-계층 관계 is a관계 
+계층 관계 is a관계
 포함 관계 has a 관계(class 안에서 만들고 쓰인경우)
 &, * 참조 관계(외부에서 만든 후 붙인경우)
 
@@ -942,7 +939,7 @@ Monster b = a; <- 복사 생성자( Monster( const Monster &p){}
  ↑동일↓
 Monater b(a);
 
-얕은 카피 
+얕은 카피
 깊은 카피
 
 int *p;
@@ -960,7 +957,7 @@ const int b;
 int b = 20;
 int &a = b; 참조형은 생성(선언)과 동시에 초기화
 
-const int  b = 10; const 형식 선언과 동시에 초기화 
+const int  b = 10; const 형식 선언과 동시에 초기화
 
 Monster(int pa, int pmax):a(pa),max(pmax)<-생성자 초기화 리스트
 {
@@ -974,7 +971,7 @@ Monster a(c,k);
 
 -------------------------
 
-접근 제어 
+접근 제어
 class(기본 private)
 struct(기본 public)
 
@@ -1003,7 +1000,7 @@ class Monster{
 
 static int count; <-클래스 변수 한개만 만들어진다.
 
-static CreateMonster() <-클래스 함수 // 맴버 변수 사용 불가 
+static CreateMonster() <-클래스 함수 // 맴버 변수 사용 불가
 {
 	if(200 < count)
 	{
@@ -1075,7 +1072,7 @@ pprint = & Point::print();
 
 ----------------------------------------------------------------
 
-<strong>//오버로딩(같은 클래스 내부에서 같은 이름의 함수 사용); 
+<strong>//오버로딩(같은 클래스 내부에서 같은 이름의 함수 사용);
 //오버라이딩(상속관계에서 부모의 함수를 자식이 재정의);
 //메세지는 같으나 반응이 다름;</strong>
 
@@ -1090,12 +1087,12 @@ class Calcurater
 	 make_coffee(latte)
 	 {		}
 	}
-	
+
 	cash
 	{
 		Action(choice)
-		{	
-			a.make_coffee( ); 		
+		{
+			a.make_coffee( );
 		}
 	}
 	var a;
@@ -1109,10 +1106,10 @@ class Calcurater
 class Monster
 {
 	int Attack;
-	
+
 	void Attack()
 	{	}
-	
+
 
 
 	bool IsAlive = false;
@@ -1125,7 +1122,7 @@ MonsterArray[1].Attack(MonsterArry[3]);
 
 if( MonsterArray[i].IsAlive == true)
 {
-	MonsterArray[i].reset;	
+	MonsterArray[i].reset;
 }
 
 ----------------------------------
@@ -1134,7 +1131,7 @@ class Monster
 {
 	//Monster(int Attack, int Defecs)
 };
-					//	  ↓ 10, 10 인자				
+					//	  ↓ 10, 10 인자
 Monster *p = new Monster(	);//동적 메모리 할당.(heep)
 delete p;
 (가상함수(vitual) 사용시 가상함수 테이블 생성됨)
@@ -1144,7 +1141,7 @@ delete p;
 int main()
 {
 	int a; (자동변수(지역변수)지만 외부변수의 성격을 갖고 있가.) (프로그램이 종료되야 끝나기 때문)
-	
+
 }
 
 ------------------------------------
@@ -1191,7 +1188,7 @@ class A
 
 };
 class B
-{ 
+{
  A
  };
 
@@ -1205,7 +1202,7 @@ b = a; //false
 
 
 (다중상속) - c++만 가능 -(최대한 사용 하지 말자), 컨버전스(융합)
-전혀 다른 속성을 가진 클래스 끼리 합칠 떄 사용 
+전혀 다른 속성을 가진 클래스 끼리 합칠 떄 사용
 
 
 정적 바인딩(컴파일시 결정)
@@ -1241,10 +1238,10 @@ virtual void funC() = 0;//순수 가상함수 생성
 
 
 </pre>
-</details>
+        </details>
 
-<details>
-<summary><strong>예외처리</strong></summary>
+        <details>
+            <summary><strong>예외처리</strong></summary>
 <pre>
 예외는 버그나 오류 같은 개발자 실수로 일어난다기 보다는
 참인줄 알았는데 그게 거짓인 경우에 일어난다.
@@ -1286,10 +1283,10 @@ catch(int* a)
 
 
 </pre>
-</details>
+        </details>
 
-<details>
-<summary><strong>namespace</strong></summary>
+        <details>
+            <summary><strong>namespace</strong></summary>
 <pre>
 namespace는 파일을 모아 놓은 폴더 같은 역할을 한다.
 ex)
@@ -1326,38 +1323,33 @@ namespace Monster
 		void Move();
 		
 	}; //<-class는 세미클론 꼭 할것.
-
-	int count;
-
-} //<-세미클론 없음(namespace)
-
+                 int count;
+                 } //<-세미클론 없음(namespace)
+                            int main()
+                            {
+                            Attack(); //<-사용 할 경우 누구의 어택에서 불러오는지 알 수 없어 오류가 난다.
+                                             Player::Attack(); //<-이런 식으로 불러와서 사용
+                                                                      return 0;
+                                                                      }
+                                                                      또는
+                                                                      using namespace Player; //<-요런 식으로 사용 하고 테이터를 가져 올 수 있다.
+                                                                                                     int main()
+                                                                                                     {
+                                                                                                     Atack();
+                                                                                                     return 0;
+                                                                                                     }
+                                                                                                     using namespace Monster;
+                                                                                                     using namespace Player;
+                                                                                                     int main()
+                                                                                                     {
+                                                                                                     Attack(); //<-오류 플레이어와 몬스터 구별 불가능
+                                                                                                                      return 0;
+                                                                                                                      }
+                                                                                                                      using Player::Atack; //Attack은 무조건 Player에서 불러온다는 의미로 사용
 int main()
 {
-	Attack(); //<-사용 할 경우 누구의 어택에서 불러오는지 알 수 없어 오류가 난다.
-	
-	Player::Attack(); //<-이런 식으로 불러와서 사용 
-	return 0;
-}
-또는 
-	using namespace Player; //<-요런 식으로 사용 하고 테이터를 가져 올 수 있다.
-int main()
-{
-	Atack();
-	return 0;
-}
-using namespace Monster; 
-using namespace Player;
-int main()
-{
-	Attack(); //<-오류 플레이어와 몬스터 구별 불가능
-	return 0;
-}
-using Player::Atack; //Attack은 무조건 Player에서 불러온다는 의미로 사용
-int main()
-{
-	Attack(); //<-OK
-	return 0;
-}
+	Attack(); //<-OK return 0;
+                    }
 
 <strong>namespace 중첩 사용 및 이름 붙여 사용 하기</strong>
 namespace Monster
@@ -1375,16 +1367,16 @@ int main()
 	Monster::Dragon::HP;
 	return 0;
 }
-별도 이름 붙여 사용 하기 
+별도 이름 붙여 사용 하기
 namespace asdfjkl
 {}
 namespace abc = asdfjkl; // 객체 생성하듯이 네임스페이스로 생성하면 된다.(중첩 된거에도 가능);
 
 </pre>
-</details>
+        </details>
 
-<details>
-<summary><strong>템플릿(STL)</strong></summary>
+        <details>
+            <summary><strong>템플릿(STL)</strong></summary>
 <pre>
 
 템플릿은 함수를 자동으로 생성하기도 하면 클래스까지 자동으로 생성 해준다.
@@ -1404,11 +1396,11 @@ class onec
 };
 
 </pre>
-</details>
+        </details>
 
 
-<details>
-<summary><strong>기타 필기</strong></summary>
+        <details>
+            <summary><strong>기타 필기</strong></summary>
 <pre>
 // Text_Word
 //필기용
@@ -1475,10 +1467,8 @@ float weight ->속성
 
 void Move()
 {  } <---Acttion 맴버 함수---
-
-----추상화----(필요한 정보)
-
-} <---캡슐화---(class로 묶음)
+                 ----추상화----(필요한 정보)
+                 } <---캡슐화---(class로 묶음)
 
 (↓메모리상에 올라오게 되면 instance 라고도 함(?))
 man a<-객체(object)_ class DataType으로 만들어진 변수를 객체라 부름/
@@ -1488,13 +1478,13 @@ int a(변수);// 변수:메모리 저장 공간 값(위치, 주소)
 
 struct sos;
 {  }sos;
-sos a; 구조체 변수 
+sos a; 구조체 변수
 
 계층간의 구조
 상속, 포함, 참조
 (일반화), (특수화), (다중상속)
 
-계층 관계 is a관계 
+계층 관계 is a관계
 포함 관계 has a 관계(class 안에서 만들고 쓰인경우)
 &, * 참조 관계(외부에서 만든 후 붙인경우)
 
@@ -1545,7 +1535,7 @@ Monster b = a; <- 복사 생성자( Monster( const Monster &p){}
  ↑동일↓
 Monater b(a);
 
-얕은 카피 
+얕은 카피
 깊은 카피
 
 int *p;
@@ -1563,7 +1553,7 @@ const int b;
 int b = 20;
 int &a = b; 참조형은 생성(선언)과 동시에 초기화
 
-const int  b = 10; const 형식 선언과 동시에 초기화 
+const int  b = 10; const 형식 선언과 동시에 초기화
 
 Monster(int pa, int pmax):a(pa),max(pmax)<-생성자 초기화 리스트
 {
@@ -1577,7 +1567,7 @@ Monster a(c,k);
 
 -------------------------
 
-접근 제어 
+접근 제어
 class(기본 private)
 struct(기본 public)
 
@@ -1606,7 +1596,7 @@ class Monster{
 
 static int count; <-클래스 변수 한개만 만들어진다.
 
-static CreateMonster() <-클래스 함수 // 맴버 변수 사용 불가 
+static CreateMonster() <-클래스 함수 // 맴버 변수 사용 불가
 {
 	if(200 < count)
 	{
@@ -1679,7 +1669,7 @@ pprint = & Point::print();
 
 ----------------------------------------------------------------
 
-//오버로딩(같은 클래스 내부에서 이름의 함수 사용); 
+//오버로딩(같은 클래스 내부에서 이름의 함수 사용);
 //오버라이딩(상속관계에서 부모의 함수를 자식이 재정의);
 //메세지는 같으나 반응이 다름;
 
@@ -1694,12 +1684,12 @@ class Calcurater
 	 make_coffee(latte)
 	 {		}
 	}
-	
+
 	cash
 	{
 		Action(choice)
-		{	
-			a.make_coffee( ); 		
+		{
+			a.make_coffee( );
 		}
 	}
 	var a;
@@ -1713,10 +1703,10 @@ class Calcurater
 class Monster
 {
 	int Attack;
-	
+
 	void Attack()
 	{	}
-	
+
 
 
 	bool IsAlive = false;
@@ -1729,7 +1719,7 @@ MonsterArray[1].Attack(MonsterArry[3]);
 
 if( MonsterArray[i].IsAlive == true)
 {
-	MonsterArray[i].reset;	
+	MonsterArray[i].reset;
 }
 
 ----------------------------------
@@ -1738,7 +1728,7 @@ class Monster
 {
 	//Monster(int Attack, int Defecs)
 };
-					//	  ↓ 10, 10 인자				
+					//	  ↓ 10, 10 인자
 Monster *p = new Monster(	);//동적 메모리 할당.(heep)
 delete p;
 (가상함수(vitual) 사용시 가상함수 테이블 생성됨)
@@ -1748,7 +1738,7 @@ delete p;
 int main()
 {
 	int a; (자동변수(지역변수)지만 외부변수의 성격을 갖고 있가.) (프로그램이 종료되야 끝나기 때문)
-	
+
 }
 
 ------------------------------------
@@ -1796,7 +1786,7 @@ class A
 
 };
 class B
-{ 
+{
  A
  };
 
@@ -1809,7 +1799,7 @@ a = b; //OK
 b = a; //false
 
 (다중상속) - c++만 가능 -(최대한 사용 하지 말자), 컨버전스(융합)
-전혀 다른 속성을 가진 클래스 끼리 합칠 떄 사용 
+전혀 다른 속성을 가진 클래스 끼리 합칠 떄 사용
 
 
 정적 바인딩(컴파일시 결정)
@@ -1843,8 +1833,8 @@ virtual void funC() = 0;//순수 가상함수 생성
 
 
 --예외처리--(후단처리)
-(버그)- 찾지 못한 오류- 
-	에러 vs 예외(상대적으로 덜 심각한 오류) - 대비 가능 - 
+(버그)- 찾지 못한 오류-
+	에러 vs 예외(상대적으로 덜 심각한 오류) - 대비 가능 -
   (복합적)
    실행(x)
  (심각한 오류)
@@ -1853,7 +1843,7 @@ virtual void funC() = 0;//순수 가상함수 생성
  -Tradeoff-
  속도 안정
 
- c++ 대부분 메모리 에러 
+ c++ 대부분 메모리 에러
  (Smart PTL 스마트 포인터)
 
  int Size 10;
@@ -1890,16 +1880,16 @@ virtual void funC() = 0;//순수 가상함수 생성
 맴버 함수에서 일반 함수로 변경한다.
 
 
- 연산자 오버로딩 
- Operator를 사용 
+ 연산자 오버로딩
+ Operator를 사용
 
- 
+
  A& Operator++()//전위형
  {
 	//내용
 	return this;
- } 
- 
+ }
+
  A& Operator++(int)//후위형
  {
 	A temp(height, weight);
@@ -1937,7 +1927,7 @@ Algorithm
 
 
 탐색
-정렬->탐색-> Data를 찾는 것 
+정렬->탐색-> Data를 찾는 것
 1.순차 탐색
 2.이진 탬색(정렬->탐색 반복 n/2씩 줄어든다)-수정 없이 고정일 경우 괜찮으나 수정이 필요할 경우 좋지 않은 방법이다.
 3.이진 탐색 트리(완전 이진 트리인 경우 '효율'이 좋다.)
@@ -1969,11 +1959,11 @@ realloc 메모리상의사이즈를 커게잡아서카피(?)
 
 -Hash Tabel-
 :hash value(hash값) Table의 index 값
-Hash : 임의의 Data를 일정한 사이즈로 만드는것//임의의 값을 고정된 값으로 변경 
+Hash : 임의의 Data를 일정한 사이즈로 만드는것//임의의 값을 고정된 값으로 변경
 예)
 (임의의 값) % 200 = 0 ~ 199 (hash value)
 
-Kye : Aalue  형태 
+Kye : Aalue  형태
 
 ↓
 Hash Funcion
@@ -1987,7 +1977,7 @@ key % 100 = 0
 
 table[0] = 2000
 
-배열 - 임의 접근 -  상수 시간 
+배열 - 임의 접근 -  상수 시간
 
 open addressing - 충돌 인정, 출돌하면 다음으로 이동 빈곳에 저장
 closed addressing - chaining - key 에 LinkedList를 붙인다. (배열에 노드르 붙인다.)
@@ -2003,7 +1993,7 @@ Graph
 
 .(점) Vertex (정점)
 /(선) edge (간선)
-인접(선으로 연결) 
+인접(선으로 연결)
 패스(경로로 인접)
 
 
@@ -2020,14 +2010,36 @@ Graph
 
 
 </pre>
-</details>
+        </details>
 
 
-</p>
+    </p>
 
 
 
 </body>
+
+<div id="disqus_thread"></div>
+<script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://web1-r8ownsi0f5.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 
 
 </html>
