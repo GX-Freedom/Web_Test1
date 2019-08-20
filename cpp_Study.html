@@ -9,52 +9,57 @@
 
 <body>
 
-    <h1><a href="index.html">WEB</a></h1>
-    <p>
-        <details>
-            <summary> Open Code</summary>
-    <p>
-        <ol>
-            <li><a href="LinkedHTML.html">HTML</a></li>
-            <li><a href="LinkedCSS.html">CSS</a></li>
-            <li><a href="LinkedJavaScript.html">JavaScript</a></li>
-            <li><a href="LinkedGames.html">Games</a></li>
-        </ol>
-    </p>
-    </details>
-    </p>
-    <p>
-        <ul>
-            <h3>Coding Study</h3>
-            <li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li>
-            <li><a href="c_shop.html">C#</a></li>
-            <li><a href="JAVA_code.html">JAVA</a></li>
-            <li><a href="JAVA_script.html">JAVA_Script</a></li>
-            <li><a href="HTML_code.html">HTML</a></li>
-            <li><a href="css_code.html">CSS</a></li>
-        </ul>
-    </p>
-    <br />
-    <p>
+<h1><a href="index.html">WEB</a></h1>
+<p>
+<details>
+    <summary> Open Code</summary>
+	<p>
+<ol>
+	<li><a href="LinkedHTML.html">HTML</a></li>
+	<li><a href="LinkedCSS.html">CSS</a></li>
+	<li><a href="LinkedJavaScript.html">JavaScript</a></li>
+	<li><a href="LinkedGames.html">Games</a></li>
+</ol>
+	</p>
+</details>
+</p>
+<p>
+<ul>
+	<h3>Coding Study</h3>
+	<li><a href="c_cpp_code.html"><strong>C/C++</strong></a></li>
+	<li><a href="c_shop.html">C#</a></li>
+	<li><a href="JAVA_code.html">JAVA</a></li>
+	<li><a href="JAVA_Script.html">JAVA_Script</a></li>
+	<li><a href="HTML_code.html">HTML</a></li>
+	<li><a href="css_code.html">CSS</a></li>
+</ul>
+</p>
+<br/>
+<p>
 
-        C/C++기초 공부하기</br>
-        C:절차적(함수와 함수로 이루워진 형태)//생략(?)</br>
-        ↓</br>
-        Data 기반 프로그래밍(유지보수 비용 절감)</br>
-        ↓</br>
-        C++:객체지향(객체와 객체로 이루워진 형태)</br>
+C/C++기초 공부하기</br>
+C:절차적(함수와 함수로 이루워진 형태)//생략(?)</br>
+              ↓</br>
+Data 기반 프로그래밍(유지보수 비용 절감)</br>
+              ↓</br>
+C++:객체지향(객체와 객체로 이루워진 형태)</br>
 
-        <details>
-            <summary><strong>변수</strong></summary>
+<details>
+<summary><strong>변수</strong></summary>
 <pre>
 <strong>Nothing</strong></br>
 변수: 메모리 저장 공간값(위치, 주소)</br>
-전역변수(외부변수):외부에 선언된 변수 이며(주로 최상단에서 선언) 프로그램이 종료시에 소멸된다.</br>
-지역변수(자동변수):중괄호 안({함수안})에서 생성되며 {함수}가 끝나면 소멸된다.</br>
-동적 변수: 동적으로 할당하여 heep영역에 위치시킨다. malloc과 new가 있다.</br>
-정적 변수: stetic(?)</br>
-</br>
-<strong>변수의 형태및 종류</strong></br></br>
+전역변수(외부변수):외부에 선언된 변수 이며(주로 최상단에서 선언) 프로그램이 종료시에 소멸된다.
+지역변수(자동변수):중괄호 안({중괄호 안})에서 생성되며 {중괄호}가 끝나면 소멸된다.
+동적 변수: 동적으로 할당하여 heep영역에 위치시킨다. malloc과 new가 있다.
+동적 할당은 꼭 사용 후 회수를 해줘야 된다. 해주지 않을 시 컴퓨터가 종료 될 때까지 존재한다.(메모리 손실)
+회수에는 malloc은 free로 회수 하며 new는 delete로 회수 시킨다.
+
+정적 변수: stetic, 보통은 중괄호 안에서 사용 되며 밖으로 
+나올 시 소멸하지만 stectic을 사용하면 중괄호 밖에서도 유지, 프로그램 종료시까지 
+
+<strong>변수의 형태및 종류</strong>
+
 <strong>일반변수</strong>: int a;<-변수 선언</br>
 ----------</br>
 <strong>매개변수</strong> : 외부에서 (오는) 인자를 받는 변수
@@ -69,7 +74,7 @@ class Lady
 ------------</br>
 <strong>구조체</strong> 변수:
 struct man()
-{
+{ 
 	int a
 }man;
 man a;<-구조체 변수</br>
@@ -83,10 +88,10 @@ Object obj; <-객체
 </br>
 
 </pre>
-        </details>
+</details>
 
-        <details>
-            <summary><strong>탑입</strong></summary>
+<details>
+<summary><strong>탑입</strong></summary>
 <pre>
 32바이트 컴퓨터에서는 32바이트</br>
 64바이트 컴퓨터에서는 64바이트로 쓰인다.</br>
@@ -125,10 +130,10 @@ double(8byte):
 long double(16byte?): 실수 길이(정밀도)을 높일 때 사용;
 (void):void타입 (아무것도 없음)</br>
 </pre>
-        </details>
+</details>
 
-        <details>
-            <summary><strong>연산자</strong></summary>
+<details>
+<summary><strong>연산자</strong></summary>
 <pre>
 연산자의 종류
 </br>
@@ -176,11 +181,11 @@ a &= b;   a = a & b;</br>
 
 </br>
 </pre>
-        </details>
+</details>
 
 
-        <details>
-            <summary><strong>분기와 반복</strong></summary>
+<details>
+<summary><strong>분기와 반복</strong></summary>
 <pre>
 조건문과 반복문은 코딩에 있어서 기본이며 가장 많이 쓰인다.(if와 for)</br>
 </br>
@@ -247,8 +252,8 @@ switch(select) //(C# TEXT도 가능)
 	case '1':
 	cout<<"스위치 캐이스\n";
 	break; //<-중요 case 끝에는 꼭 break 즉, 탈출 조건을 달아야된다.
-                 case '2' :
-                 cout<<"이런식으로 정수를 입력받으면 된다."
+	case '2':
+	cout<<"이런식으로 정수를 입력받으면 된다."
 	break;
 }
 
@@ -266,7 +271,7 @@ for(int i = 0; i < 10; i++)
 이경우는 9까지 출력 된 후 종료 된다.
 
 <strong>while문</strong>
-while문은 조건을 정하고 조건이 true일 동안 계속해서 반복하는 반복문이다.
+while문은 조건을 정하고 조건이 true일 동안 계속해서 반복하는 반복문이다.(탈출 조건을 적지 않을시 계속해서 반복된다.)
 예)
 int i = 0;
 while(i <= 10)
@@ -274,7 +279,7 @@ while(i <= 10)
 	i++;
 	cout<< i << "\n";
 }
-이경우 i는 11일 될 때까지 반복에서 실행 된다.
+이경우 i는 11일 될 때까지 반복에서 실행 된다. 
 
 반복문 또한  조건문인 if문과 같이 연속적으로 반복 시킬 수 있다.
 for(int i = 0; i < 10; i++)
@@ -294,29 +299,34 @@ while(1)
 
 </br>
 </pre>
-        </details>
+</details>
 
-        <details>
-            <summary><strong>배열</strong></summary>
+<details>
+<summary><strong>배열</strong></summary>
 <pre>
 배열: 배열은 동일한 타입의 변수를 메모리상에 연속적으로 모아 놓은 변수이다.
 예)
 int a[5]; int 타입 a의 변수 5개가 만들어졌다.
-[]<-대괄호 안에 해당 변수를 몇개 만들지 정하는 것이다.
-        사용은 (0부터 시작)
-        초기화 방법
-        1)
-        a[0]=1;
-        a[1]=2;
-        a[2]=3;
-        a[3]=4;
-        a[4]=5;
-        2)b[5]={0, 1, 2, 3, 4};
-        한번에 초기화가 된다.
-        만약 b[5]={1, 2}이렇게만 하게 된다면
-        b[0], b[1]예 1과 2가 들어가고 나머지는 쓰레기값을 갖게 된다.
-        또한 배열과 배열끼리 대입이 불가능 하다.
-        a=b; //오류
+[]<-대괄호 안에 해당 변수를 몇개 만들지 정하는 것이다. 
+
+사용은 (0부터 시작)
+초기화 방법 
+
+1)
+a[0] = 1;
+a[1] = 2;
+a[2] = 3;
+a[3] = 4;
+a[4] = 5;
+
+2)b[5] = {0, 1, 2, 3, 4};
+한번에 초기화가 된다.
+
+만약 b[5] = {1, 2}이렇게만 하게 된다면
+b[0], b[1]예 1과 2가 들어가고 나머지는 쓰레기값을 갖게 된다.
+
+또한 배열과 배열끼리 대입이 불가능 하다.
+a = b; //오류
 
 배열의 크기 구하기
 배열의 크기 = 원소의 크기 * 원소의 개수
@@ -330,13 +340,1075 @@ char b = 0;
 
 
 </pre>
-        </details>
+</details>
+
+
+
+<details>
+<summary><strong>구조체</strong></summary>
+<pre>
+구조체: 여러가지 타입(변수)의 정보를 모아 놓은 곳
+예)
+struct Monster
+{
+	int Attack;
+	int Defencs;
+	int Health;
+
+}Monster;
+
+Monster a;<-구조체 변수
+
+구조체는 사용자 정의 타입이라고도 한다.
+구조체에 내부에 있는 변수들을 맴버 또는 맴버 변수라고 부른다.
+
+a.Attack;
+a: 구조체 변수의 이름
+.(dot):구조체 맴버변수에 접근
+Attack: 구조체 맴버변수
+
+구조체 초기화
+구조체 초기화는 매별을 초기화 하던 방법과 비슷한 방법으로 사용 하면 된다.
+Monster b = {10, 5, 20};
+각각 b.Attack = 10; b.Defencs = 5; b.Health = 20; 이것과 동일하다.
+
+구조체 대입
+구조체 대입은 구조체 변수끼리 대입을 뜻한다.
+같은 구조체 타입의 변수끼리 대입하게 되면 각 맴버 변수의 값이 복사된다.
+
+a = b; 
+b에 있는 값이  a로 복사되서 대입 된다.(얕은 카피)
+
+구조체 동시 정의
+struct toy
+{
+	int a;
+	int b;
+}t1 = {10, 5}, t2;
+//구조체 toy의 변수 t1과 t2를 동시 정의 했다.(현재 t2값은 쓰레기 값이다.)
+
+t2 = t1; // (t1값을 t2에 대입 (얕은 카피));
+
+</pre>
+</details>
+
+<details>
+<summary><strong>포인터</strong></summary>
+<pre>
+<strong>포인터</strong>: 포인터는 다른 변수(또는 함수)의 위치(주소 값)를 가르킨다.(메모리상의)
+포인터는 변수를 가르키는 변수 포인터, 함수를 가르키는 함수 포인터가 있다.
+또한 배열같이 메모리에 연속적으로 있을 경우 첫번째 주소를 가르킨다.
+
+int a;
+   ↓포인터 ↓(&)변수의 주소
+int* pa(포인터 변수) = &a;
+↑포인터 타입
+
+<strong>배열 포인터:</strong>
+
+ex)
+int b[10];
+int* pb = &b[0];
+
+pb++; // bp = &b[1]를 가르킨다.
+++은 1씩 더해 다음 배열의 주소를 가르킨다.(포인터 타입에 따라 다음 주소를 가르킨다.)
+
+
+포인터는 초기화를 하지 않는다면 쓰레기 값을 갖고 있다.
+포인터를 바로 사용 하지 않을 경우 포인트 값을 NULL로 초기화 해주는게 좋다.
+
+</pre>
+</details>
+
+
+
+<details>
+<summary><strong>const</strong></summary>
+<pre>
+const는 변수의 값을 변경하지 않을 때 사용한다.
+
+const int a = 100;
+a = 22; //오류
+
+이미 값을 갖고 있는 상태에서 const를 사용 할 경우 값을 변경 할 수 없다.
+
+const int b;
+b = 10;
+
+이 또한 불가능 하다.
+const는 재정의가 불가능 하기에 생성과 동시에 초기화를 해줘야된다.
+
+const c = 777;
+c는 777 값으로만 사용 할 수있다.
+
+물로 const를 처음부터 사용하지 않고 다른 곳에 값을 넘겨 줄 때만 사용 가능하다.
+
+int i = 0;
+void Func(int const i)
+{
+	i의 값은 사용 가능 하지만 변경이 불가능 하다.
+}
+
+포인터에 또한 const를 사용 가능하다.
+
+const int* p = &i;
+
+이경우 i는 값이 변경 가능하나, 포인터 p를 통해 변수의 값 변경이 불가능하다.
+ex)
+p = &c;// Ok
+p = 20; //false;
+
+int* const p = i;
+이 경우는 포인터를 통해 i의 값을 변경하는게 가능하나 포인터p가 다른 주소를 가르킨 수 없다.
+예)
+p = 10; //Ok;
+p = &c; //false;
+
+const int* const p = i;
+이경우는 두개 다 변경이 불가능하다. 
+
+
+</pre>
+</details>
+
+
+<details>
+<summary><strong>복합타입</strong></summary>
+<pre>
+<stron>공용체</strong>
+
+공용체는 구조체와 비슷하게 생겼지만 맴버가 같은 메모리 공간에 자리잡는다.(특징)
+
+공용체 정의
+
+union MyUnion
+{
+	int a;
+	void* p;
+};
+
+MyUnion mu;<-고용체 변수
+
+<strong>열거체</strong>
+
+열거체는 하나의 타입이어서 열거체 타입의 변수를 정의해서 사용이 가능하다.
+
+enum jobType {warrior = 0, knight = 1};
+
+<strong>레퍼런스</strong>
+레퍼런스란 변수의 별명이다.
+
+int a = 10;
+  (↓참조를 넣어야 레퍼렌스가 된다.)
+int& fer = a;
+(↑레퍼런스 변수가 참조할 타입)
+
+<strong>typedef</strong>
+typedef 타입에 대한 (별명)재정의 한다.
+
+typedef int ElemetType;
+
+typedef는 나중에 타입이 변 할 수 있는 경우를 대비해서 만들어 사용 한다.
+
+<strong>구조체의 비트 필드</strong>
+
+맴버 변수 a는 3비트 b는 4비트만 차지하게 만드는게 가능하다.
+
+struct bit
+{
+	int a : 3;
+	int b : 4;
+	bool c : 1;
+};
+비트 필드는 비트 단위의 논리 연산을 대신하여 사용 가능하다.
+
+<strong>구조체를 포함하는 구조체</strong>
+구조체 안에서 또다른 구조체를 정의 하는 방법
+
+struct One
+{
+	int a;
+	int b;
+};
+struct Two
+{
+	char c;
+	One on;
+};
+
+<strong>다차원 배열</strong>
+
+다차원 배열이란 배열의 배열을 뜻한다.
+
+일반적인 배열은 그림으로 표현한다면 한줄로 쭉이어진 것을 뜻한다.(1차원 배열)
+(2차원 배열) 1차원 배열이 모여 만들어진 것
+(3차원 배열) 2차원 배열이 모여 만들어진 것
+이와 같이 여러가지 배열을 모아 만들어 진것들을 포괄하여 다차원 배열이라 한다.
+예)
+arr[5][5];(2차원 배열)
+
+<strong>포인터를 가리키는 포인터</strong>
+
+포인터의 포인터
+int a = 1;
+int* pa = &a;(포인터)//int타입 포인터 pa &a를 가르킨다.
+int** ppa = &pa;(포인터의 포인터)//int타입 포인터의 포인터 ppa &pa를 가르킨다.
+사용 방법은 일반적인 포인터와 동일 하다.
+단지, 포인터 변수를 받는 포인터라 하여 
+포인터의 포인터라 한다.
+
+
+</pre>
+</details>
+
+
+<details>
+<summary><strong>함수</strong></summary>
+<pre>
+
+함수의 특징: 재사용
+
+함수는 자신을 호출하는 함수의 앞에 위치 해야된다. (함수의 원형만 앞쪽에 위치해도 된다.);
+
+함수를 만들 때 한개로 크게 만들면 다른 곳에 재 사용하기 힘들다.
+하지만 여러게로 만들어 구현 해놓으면 필요한 부분만 갖고가서 다른 곳에 재사용이 가능하다.
+
+함수의 형태
+예)
+(↓return 타입)
+void Func(int a)
+{  //(↑함수명)(↑매개 변수)
+	//함수 구현 내용
+}
+재사용
+예)
+
+//적절한 예인지는 모르겠으나.. 이런식으로 사용
+
+메인.cpp
+
+void Func(){
+
+}
+
+void Func3(); //함수의 원형
+
+int main()//한개로 구현한 경우라고 생각하시면 됨
+{
+	Func();
+	Attack()
+	{}
+	Defence()
+	{}
+	Move(){}
+	Funce2();//오류
+	Funce3();//OK
+}//메인 문 안에 한번에 사용하면 수천줄 일 경우 찾고 수정하기가 매우 힘들다.
+void Func2()
+{
+
+}
+void Func3()
+{
+
+}
+
+<strong>=============================================================</strong>
+
+헤더.h(.cpp)
+
+void Attak()
+{}
+void Defence(){
+
+}
+void Move()
+{
+
+}
+
+메인.cpp
+
+int main()
+{
+	Attack();
+	Defence();
+	Move();
+}
+
+<strong>반환값(return)</strong>
+
+반환값이란 함수를 실행하고 값을 가지고 되돌아 가능 걸 반환값(return)이라고 한다.
+
+int fun()//int타입의 반환값을 갖는다.
+{
+	return 0;
+}
+float fun()//float타입의 반환값
+{
+	return 0.0f;
+}
+void fun()//void 반환값을 갖지 않는다.
+{
+	//nothing
+}
+
+<strong>다른 함수에 있는 변수 사용</strong>
+
+다른 함수에 있는 변수를 사용은 특별한 경우가 아니면 사용하지 못 한다.
+특별한 경우(stectic(정적))
+
+void funx()
+{
+	int a;
+}
+void func()
+{
+	a = 10 //false
+}
+
+메모리상에 서로 다른 곳에 위치 하기 때문에 서로 다른 변수이기 사용불가능 하다.
+
+
+
+<strong>인자 전달</strong>
+
+<strong>오버로딩(overloading)</strong>
+
+오버로딩이란 여러 함수들이 동일한 이름을 사용 하는 것을 말한다.
+1. int fun(char a, int b);
+2. float func(char a, float b);
+
+int main()
+{
+	fun(3); //무슨 함수를 오훌 할지 모름
+	fun((int) 1); //1번함수
+	funt((float) 3.2f); //2번함수
+}
+
+<strong>재귀호출</strong>
+
+재귀호출이란 함수가 자신을 호출하는 경우다.
+void Fectorial()//int n
+{
+	
+	Fectorial();
+	/*n++;
+	if(n == 10){
+	break;
+	}*/
+}
+
+Fectorial();//실행시 무한 반복해서 실생하게 된다.
+그러니 탈출 조건을 꼭 적어 줘야 된다.
+
+<strong>함수에 대한 포인터</strong>
+예)
+void a(){}//함수
+void (*p)();//함수 포인터
+p = &a;//함수 포인터로 함수를 가르킨다.
+(*p)();//호출
+p
+
+<strong>typedef 함수 포인터 정의</strong>
+(↓타입 재정의)  (이름) (↓함수 포인터 타입이 가르키는 함수 시그니처)
+typedef void (*func)(int);
+        (↑포인터 타입)
+//;
+예)
+//원형
+int age1(int a, int b);
+float age2(float c);
+
+//변경  - 원형 앞에 typdef적고 이름 변경 후 인자 이름 제거 - 
+typedef (*Type1)(float);
+typedef int(*Type2)(int, int);
+
+Type1 Newage1;
+Type1 Newage2;
+Type2 Newage3;
+
+Newage(3.3f);
+Newage(1.03f);
+Newage(22);
+
+Type1이 2개 Type2가 1개 생성됐다.
 
 
 
 
-        <details>
-            <summary><strong>기타 필기</strong></summary>
+
+</pre>
+</details>
+
+
+
+<details>
+<summary><strong>동적 메모리 할당</strong></summary>
+<pre>
+
+동적 메모리 할당이란 메모리상의 heep영역에 위치한다.
+동적 메모리 사용에는 malloc과 new가 있다.
+동적메모리 사용 후에는 꼭 회수를 해줘야 된다. 하지 않을시 컴퓨터가 종료되기 전까지 남아서
+메모리 공간을 차지하게된다.
+
+메모리 해제는 
+malloc은 free, new는 delete로 해제한다.
+
+예)-원형-
+Node* NewNode = (Node*)malloc(sizeof(Node));//동적메모리 할당
+free(NewNode);//메모리 해제
+
+Node* NewNode = New Node;//동적 메모리 생성
+
+delete NewNode;//메모리 해제 
+
+
+
+</pre>
+</details>
+
+<details>
+<summary><strong>문자열</strong></summary>
+<pre>
+string(문자열)과 char(문자)
+가장 큰 차이는 NULL이 있냐 없냐의차이다.
+문자열에는 NULL이 있고 문자에는 없다.
+</pre>
+</details>
+
+
+<details>
+<summary><strong>헤더파일 구현파일</strong></summary>
+<pre>
+#include <>//기본적으로 재공하는 템플릿
+#include "파일명.h"//사용자가 만든 헤더파일
+
+해더파일을 두개이상 포함 되면 오류가 난다.
+
+그럴 때를 대비해 헤더파일에 연속적으로 포함됮 않게 
+
+#ifndef POINT_H
+#define POINT_H
+
+//내용
+
+#endif
+
+
+이런 식이지만 요즘은
+
+#pragma once
+
+한번 쓰는 걸로도 된다.(최상단에다가 쓰면 된다.);
+
+</pre>
+</details>
+
+
+<details>
+<summary><strong>클래스(객체)</strong></summary>
+<pre>
+<strong>클래스</strong>
+클래스 기본 구조:
+클래스의 기본 구조는 구조체의 기본 구조와 비슷하다.(역할 또한 비슷하다.)
+예)(↓clss 키워드로 정의)
+class Luck<-클래스 명
+{   
+     //접근 제어
+	private: int a; <-비공개(누구도 접근 할 수 없다.)
+	protected: float b; <-자식클래스만 공개(상속받은 클래스만 사용 가능하다.)
+	public: void func(); <-공개(외부에서 누구나 접근이 가능하다.)
+	//클래스 내부의 변수, 함수를 맴버 변수와 맴버 함수라 부른다.
+
+}; <-주의
+객체:
+객체란 쉽게 말하면 클래스 변수를 뜻한다.
+예)
+Luck lu; <-객체 생성 
+li.func(); <-객체를 사용한 함수 사용(객체지향으 일부(?));
+
+<strong>생성자와 소멸자</strong>
+생성자는 클래스 내부에 클래스와 같은 이름을 갖고 있다.
+기본적으롤 생성자는 객체를 생성 할 때 자동적으로 호출며 소멸될 때 소멸자가 호출된다.
+
+class Rule
+{
+	Rule();//생성자(매개 변수를 만들 수 있다.)
+	~Rule();//소멸자
+};
+Rule::Rule()//생성자 정의
+{
+	int a = 0;
+}
+~Rule(); //소멸자 호출
+
+</pre>
+</details>
+
+<details>
+<summary><strong>객체지향 programming</strong></summary>
+<pre>
+//객체 지향 이전 절차적 프로그래밍 -> Data기반 프로그래밍(유지보수 비용 증가로 인해 탄생(?) ) 
+--(발전)--> 객체지향 programming 
+
+<strong>객체 지향의 3대 속성
+1.다향성 
+2.상속
+3.캡슐화</strong>
+
+Object -> 대상(현실/상상)
+추상화 -> 대상을 단순화 또는 필요하는 것을 Data로 뽑아내는 것
+  ↓ 
+Object -> clss화 
+
+class man{
+
+float weight ->속성
+--Data 맴버 변수--
+
+----------------------
+
+void Move()
+{  } <---Acttion 맴버 함수---
+
+----추상화----(필요한 정보)
+
+} <---캡슐화---(class로 묶음)
+
+
+(↓메모리상에 올라오게 되면 instance 라고도 함(?))
+<strong>man a<-객체(object)_ class DataType으로 만들어진 변수를 객체라 부름;</strong>
+a.Move();
+
+int a(변수);// 변수:메모리 저장 공간 값(위치, 주소)
+
+struct sos;
+{  }sos;
+sos a; 구조체 변수 
+
+계층간의 구조
+상속, 포함, 참조
+(일반화), (특수화), (다중상속)
+
+계층 관계 is a관계 
+포함 관계 has a 관계(class 안에서 만들고 쓰인경우)
+&, * 참조 관계(외부에서 만든 후 붙인경우)
+
+보여주는 부분(인터페이스(함수))
+
+<strong>접근제어</strong>
+private:모두 접근 안 됨(본인은 제외)
+protected:(상속)자식은 접근 가능하나 외부에서 접근이 안 됨
+public:모두 접근 가능
+
+<strong>다형성</strong>
+객체와 객체간의 메세지를 전달하는 방법(함수와 함수 호출)
+같은 메세지의 다른 반응, 오버로딩: 같은 이름의 함수, 인자만 달리 하여 사용
+다형성이 상속관계 일경우 오버라이딩
+
+생성자() 초기화
+기본 생성자:인자를 받지 않는 생성자
+인자를 받는 생성자
+
+~소멸자()
+~(틸드)
+--------------------------------------------------------
+
+<strong>class의 정의</strong>
+
+class Monster
+{
+
+맴버 변수: 클래스 내부(선언 안)에서 선언한 변수
+맴버 함수: 클래서 내부(선언 안)에서 생성한 함수(구현부와 선언부를 나눠서 사용한다. (보통) )
+인라인 함수: 클래스 내부에서 만들어진 함수
+
+외부에서 만들경우: 선언부와 구현부를 나누어 만들어진다.
+
+void Move(); <-선언
+
+
+};
+
+---main.cpp---
+void Monster::Move()<-구현
+{ 구현부 }
+
+-------------------------------
+Monster a(10);
+
+Monster b = a; <- 복사 생성자( Monster( const Monster &p){}
+ ↑동일↓
+Monater b(a);
+
+얕은 카피 
+깊은 카피
+
+int *p;
+malloc
+new
+
+-----------------
+생성자: 맴버 변수에 참조, 상수형이 있을 경우 생성자를 반드시 만들것.
+
+class Monster
+{
+int &a;
+const int b;
+};
+int b = 20;
+int &a = b; 참조형은 생성(선언)과 동시에 초기화
+
+const int  b = 10; const 형식 선언과 동시에 초기화 
+
+Monster(int pa, int pmax):a(pa),max(pmax)<-생성자 초기화 리스트
+{
+  a = pa;(X)불가능
+  max = pmax;(X)
+}
+int c = 10;
+int k = 5;
+Monster a(c,k);
+
+
+-------------------------
+
+접근 제어 
+class(기본 private)
+struct(기본 public)
+
+class Monster
+{
+private:
+	맴버 변수;(최대한 private으로 만들것)
+protected:
+
+public:
+	맵버 함수;(접근자를 이용하여 public으로 만들어 맴버 변수에 접근 및 함수 생성)
+};
+
+private:모두 접근 안 됨(본인은 제외)
+protected:상속(자식)은 접근 가능하나 외부에서 접근이 안 됨
+public:모두 접근 가능
+
+Monster a; <-객체를 이용하여 접근
+
+------------------------------
+
+
+정적맴버
+
+class Monster{
+
+static int count; <-클래스 변수 한개만 만들어진다.
+
+static CreateMonster() <-클래스 함수 // 맴버 변수 사용 불가 
+{
+	if(200 < count)
+	{
+	  Monster();<-생성
+	}
+}
+
+};
+
+Monster::count; <- 접근 방법;
+
+Monster::CreateMonster();
+
+-------------------------------------
+
+인라인 함수
+
+컴파일이 판단해서 함수 호출 위치에 코드를 넣어준다.(컴파일러 판단에 따라 그때 그때 다르다.) - 메크로 함수라고도 함.
+
+예)
+
+void print()
+{
+cout<< "messega\n";
+}
+
+void messege()
+{
+print();
+}
+
+inline 키워드 사용 할 경우 바로 함수 내부에 구현 해야된다. h와 cpp 분리하면 안 됨.
+
+
+
+함수() const{} 일 경우 맴버 변수의 값을 변경하지 않는 함수이다.
+
+const형 함수는 const형 함수만 호출 가능하다.
+
+----------------------------------------------------
+
+//(코딩시 메모리 생각 할것. RAM메모리 (함수, 변수) // CS DS Heep SS (CPU: 레지스트 안에도 있음)
+
+함수 포인터
+
+void func(int a);
+
+void (*pfunc)(int);
+
+pfunc = &func();
+
+(*pfunc)(10);
+
+
+맴버 함수 포인터
+
+class Point
+{
+
+void print();
+void (Point::*pprint)();
+
+pprint = & Point::print();
+
+(*pprint)();
+
+};
+
+
+----------------------------------------------------------------
+
+<strong>//오버로딩(같은 클래스 내부에서 같은 이름의 함수 사용); 
+//오버라이딩(상속관계에서 부모의 함수를 자식이 재정의);
+//메세지는 같으나 반응이 다름;</strong>
+
+맴버함수 오버로딩(인자의 데이터 타입으로 구별)
+
+class Calcurater
+{
+	var
+	{
+	 make_coffee(americano)
+	 {		}
+	 make_coffee(latte)
+	 {		}
+	}
+	
+	cash
+	{
+		Action(choice)
+		{	
+			a.make_coffee( ); 		
+		}
+	}
+	var a;
+	cash b;
+	b.Action(choice);
+
+};
+
+---------------------------------
+
+class Monster
+{
+	int Attack;
+	
+	void Attack()
+	{	}
+	
+
+
+	bool IsAlive = false;
+
+};
+
+Monster MonsterArry[10];
+
+MonsterArray[1].Attack(MonsterArry[3]);
+
+if( MonsterArray[i].IsAlive == true)
+{
+	MonsterArray[i].reset;	
+}
+
+----------------------------------
+
+class Monster
+{
+	//Monster(int Attack, int Defecs)
+};
+					//	  ↓ 10, 10 인자				
+Monster *p = new Monster(	);//동적 메모리 할당.(heep)
+delete p;
+(가상함수(vitual) 사용시 가상함수 테이블 생성됨)
+
+-------------------------------------
+
+int main()
+{
+	int a; (자동변수(지역변수)지만 외부변수의 성격을 갖고 있가.) (프로그램이 종료되야 끝나기 때문)
+	
+}
+
+------------------------------------
+typedef(타입 재정의)
+
+------------------------------------
+
+class Monster
+{
+	int Attack;
+	int Defece;
+	int Health;
+
+	Monster(int _Attack)
+	{
+	(this->)	Attack = _Attack;
+	  ↑생략(호출한 객체의 주소값)
+	}
+};
+
+---------------------------------------------------
+
+(계층구조 관계를 맺는 방법)
+<strong>상속과 포함</strong>
+
+(상속:계층관계)
+Framework(틀을 짤 때 주로 사용된다.)//변화하지 않고 고정될 때 주로 사용하면 좋다.
+class A{
+};
+
+class B:A{
+};
+
+일반화 : 공통된 데이터를 부모클래스로 올리고 상속받는다.
+
+특수화 : 클래스가 커지며 분기(분류)를 해야 될 때.(따로 빼서 상속 받는다.)
+
+--
+
+(포함:클래스 내부에 다른 클래스를 맴버 변수(객체)로 쓰일 때)//
+
+class A
+{
+
+};
+class B
+{ 
+ A
+ };
+
+A a;
+
+B b;
+
+a = b; //OK
+
+b = a; //false
+
+
+(다중상속) - c++만 가능 -(최대한 사용 하지 말자), 컨버전스(융합)
+전혀 다른 속성을 가진 클래스 끼리 합칠 떄 사용 
+
+
+정적 바인딩(컴파일시 결정)
+
+------------------------------------------------
+동적 바인딩(가상함수 virtual)//실행중에 결정
+
+
+-가상함수 테이블 생성(vptr)-
+
+clss A{
+public:
+	virtual void func()
+	{
+
+	}
+};
+
+class B:public A{
+	void func()
+	{
+
+	}
+
+};
+
+
+순수 가상함수 = //부모 클래스에서 가상함수를 만들시 자식 클래스에서 (꼭) 가상함수를 재정의를 해야된다.(오버라이딩)
+(스스로 객체를 생성 못 함)
+virtual void funC() = 0;//순수 가상함수 생성
+
+
+
+
+</pre>
+</details>
+
+<details>
+<summary><strong>예외처리</strong></summary>
+<pre>
+예외는 버그나 오류 같은 개발자 실수로 일어난다기 보다는
+참인줄 알았는데 그게 거짓인 경우에 일어난다.
+예외가 일어나는 경우:(c++은 대부분 메모리 에러)
+예)
+<li>컴퓨터의 사용 가능한 메모리가 부족한 경우</li>
+<li>하드디스크에 파일을 파일을 쓰는데 용량이 부족한 경우</li>
+<li>사용자가 범위 밖의 값을 입력 하거나 존재하지 않는 파일의 이름을 입력하는 경우</li>
+
+<strong>반환 값을 사용한 예외 처리</strong>
+반환 값을 사용한 예외 처리를 사용하면 함수 호출마다 반환 값을 비교해야 된다.
+두번 째는 함수가 이미 다른 용도로 반환 값을 사용하는 경유도 있다.
+
+
+<strong>구조적 예외 처리</strong>
+int Size = 10;
+int Array[Size];
+bool Setvalue(int Data, int Index)
+{
+	if(Index >= 0 && Index < Size)
+	{
+		Array[Index] = Data;
+		return true;
+	}
+}
+return false;
+
+throw 로 던지고
+
+try catch 문 사용
+
+try{
+	Setvalue(3,3);
+}
+catch(int* a)
+{
+	cout << a << "\n";
+}
+
+
+</pre>
+</details>
+
+<details>
+<summary><strong>namespace</strong></summary>
+<pre>
+namespace는 파일을 모아 놓은 폴더 같은 역할을 한다.
+ex)
+namespace Player
+{
+	class Player
+	{
+
+	private:
+	int HP;
+	int Attack;
+
+	public:
+	void Attack()
+	{
+		HP(HP-Attack);//Get과 Set을 이용하여 private영역에 접근하여 사용
+	}
+	
+
+	};
+
+	int count;
+}
+namespace Monster
+{
+	class Monster
+	{
+		private:
+		int HP;
+		int Attack;
+
+		public:
+		void Attack();
+		void Move();
+		
+	}; //<-class는 세미클론 꼭 할것.
+
+	int count;
+
+} //<-세미클론 없음(namespace)
+
+int main()
+{
+	Attack(); //<-사용 할 경우 누구의 어택에서 불러오는지 알 수 없어 오류가 난다.
+	
+	Player::Attack(); //<-이런 식으로 불러와서 사용 
+	return 0;
+}
+또는 
+	using namespace Player; //<-요런 식으로 사용 하고 테이터를 가져 올 수 있다.
+int main()
+{
+	Atack();
+	return 0;
+}
+using namespace Monster; 
+using namespace Player;
+int main()
+{
+	Attack(); //<-오류 플레이어와 몬스터 구별 불가능
+	return 0;
+}
+using Player::Atack; //Attack은 무조건 Player에서 불러온다는 의미로 사용
+int main()
+{
+	Attack(); //<-OK
+	return 0;
+}
+
+<strong>namespace 중첩 사용 및 이름 붙여 사용 하기</strong>
+namespace Monster
+{
+	namespace Dragon
+	{
+		//내용
+		int HP;
+	}
+	//내용
+}
+//이중으로 사용 가능
+int main()
+{
+	Monster::Dragon::HP;
+	return 0;
+}
+별도 이름 붙여 사용 하기 
+namespace asdfjkl
+{}
+namespace abc = asdfjkl; // 객체 생성하듯이 네임스페이스로 생성하면 된다.(중첩 된거에도 가능);
+
+</pre>
+</details>
+
+<details>
+<summary><strong>템플릿(STL)</strong></summary>
+<pre>
+
+템플릿은 함수를 자동으로 생성하기도 하면 클래스까지 자동으로 생성 해준다.
+
+예)
+int Calcurater(int a, int b)
+{
+	return (a > b ? a : b); //둘중 비교해서 큰값을 반환하는 함수
+}
+int 가 아닌 float타입이면 오버로딩으로 함수를 만들 수 있지만 
+템플릿으로 사용 할 수 있다.
+(오퍼레이터(operator)를 사용)
+template < typename T>
+class onec
+{
+	
+};
+
+</pre>
+</details>
+
+
+<details>
+<summary><strong>기타 필기</strong></summary>
 <pre>
 // Text_Word
 //필기용
@@ -403,8 +1475,10 @@ float weight ->속성
 
 void Move()
 {  } <---Acttion 맴버 함수---
-                 ----추상화----(필요한 정보)
-                 } <---캡슐화---(class로 묶음)
+
+----추상화----(필요한 정보)
+
+} <---캡슐화---(class로 묶음)
 
 (↓메모리상에 올라오게 되면 instance 라고도 함(?))
 man a<-객체(object)_ class DataType으로 만들어진 변수를 객체라 부름/
@@ -414,13 +1488,13 @@ int a(변수);// 변수:메모리 저장 공간 값(위치, 주소)
 
 struct sos;
 {  }sos;
-sos a; 구조체 변수
+sos a; 구조체 변수 
 
 계층간의 구조
 상속, 포함, 참조
 (일반화), (특수화), (다중상속)
 
-계층 관계 is a관계
+계층 관계 is a관계 
 포함 관계 has a 관계(class 안에서 만들고 쓰인경우)
 &, * 참조 관계(외부에서 만든 후 붙인경우)
 
@@ -471,7 +1545,7 @@ Monster b = a; <- 복사 생성자( Monster( const Monster &p){}
  ↑동일↓
 Monater b(a);
 
-얕은 카피
+얕은 카피 
 깊은 카피
 
 int *p;
@@ -489,7 +1563,7 @@ const int b;
 int b = 20;
 int &a = b; 참조형은 생성(선언)과 동시에 초기화
 
-const int  b = 10; const 형식 선언과 동시에 초기화
+const int  b = 10; const 형식 선언과 동시에 초기화 
 
 Monster(int pa, int pmax):a(pa),max(pmax)<-생성자 초기화 리스트
 {
@@ -503,7 +1577,7 @@ Monster a(c,k);
 
 -------------------------
 
-접근 제어
+접근 제어 
 class(기본 private)
 struct(기본 public)
 
@@ -532,7 +1606,7 @@ class Monster{
 
 static int count; <-클래스 변수 한개만 만들어진다.
 
-static CreateMonster() <-클래스 함수 // 맴버 변수 사용 불가
+static CreateMonster() <-클래스 함수 // 맴버 변수 사용 불가 
 {
 	if(200 < count)
 	{
@@ -547,11 +1621,315 @@ Monster::count; <- 접근 방법;
 Monster::CreateMonster();
 
 
+-------------------------------------
+
+<strong>인라인 함수</strong>
+
+컴파일이 판단해서 함수 호출 위치에 코드를 넣어준다.(컴파일러 판단에 따라 그때 그때 다르다.) - 메크로 함수라고도 함.
+
+예)
+
+void print()
+{
+cout<< "messega\n";
+}
+
+void messege()
+{
+print();
+}
+
+inline 키워드 사용 할 경우 바로 함수 내부에 구현 해야된다. h와 cpp 분리하면 안 됨.
+
+
+
+함수() const{} 일 경우 맴버 변수의 값을 변경하지 않는 함수이다.
+
+const형 함수는 const형 함수만 호출 가능하다.
+
+----------------------------------------------------
+
+//(코딩시 메모리 생각 할것. RAM메모리 (함수, 변수) // CS DA Heep SS (CPU: 레지스트 안에 있음)
+
+함수 포인터
+
+void func(int a);
+
+void (*pfunc)(int);
+
+pfunc = &func();
+
+(*pfunc)(10);
+
+
+맴버 함수 포인터
+
+class Point
+{
+
+void print();
+void (Point::*pprint)();
+
+pprint = & Point::print();
+
+(*pprint)();
+
+};
+
+
+----------------------------------------------------------------
+
+//오버로딩(같은 클래스 내부에서 이름의 함수 사용); 
+//오버라이딩(상속관계에서 부모의 함수를 자식이 재정의);
+//메세지는 같으나 반응이 다름;
+
+맴버함수 오버로딩(인자의 데이터 타입으로 구별)
+
+class Calcurater
+{
+	var
+	{
+	 make_coffee(americano)
+	 {		}
+	 make_coffee(latte)
+	 {		}
+	}
+	
+	cash
+	{
+		Action(choice)
+		{	
+			a.make_coffee( ); 		
+		}
+	}
+	var a;
+	cash b;
+	b.Action(choice);
+
+};
+
+---------------------------------
+
+class Monster
+{
+	int Attack;
+	
+	void Attack()
+	{	}
+	
+
+
+	bool IsAlive = false;
+
+};
+
+Monster MonsterArry[10];
+
+MonsterArray[1].Attack(MonsterArry[3]);
+
+if( MonsterArray[i].IsAlive == true)
+{
+	MonsterArray[i].reset;	
+}
+
+----------------------------------
+
+class Monster
+{
+	//Monster(int Attack, int Defecs)
+};
+					//	  ↓ 10, 10 인자				
+Monster *p = new Monster(	);//동적 메모리 할당.(heep)
+delete p;
+(가상함수(vitual) 사용시 가상함수 테이블 생성됨)
+
+-------------------------------------
+
+int main()
+{
+	int a; (자동변수(지역변수)지만 외부변수의 성격을 갖고 있가.) (프로그램이 종료되야 끝나기 때문)
+	
+}
+
+------------------------------------
+typdef(타입 재정의)
+
+------------------------------------
+
+class Monster
+{
+	int Attack;
+	int Defece;
+	int Health;
+
+	Monster(int _Attack)
+	{
+	(this->)	Attack = _Attack;
+	  ↑생략(호출한 객체의 주소값)
+	}
+};
+
 
 */
 
+(계층구조 관계를 맺는 방법)
+상속과 포함
+
+(상속:계층관계)
+Framework(틀을 짤 때 주로 사용된다.)//변화하지 않고 고정될 때 주로 사용하면 좋다.
+class A{
+};
+
+class B:A{
+};
+
+일반화 : 공통된 데이터를 부모클래스로 올리고 상속받는다.
+
+특수화 : 클래스가 커지며 분기(분류)를 해야 될 때.(따로 빼서 상속 받는다.)
+
+--
+
+(포함:클래스 내부에 다른 클래스를 맴버 변수(객체)로 쓰일 때)//
+
+class A
+{
+
+};
+class B
+{ 
+ A
+ };
+
+A a;
+
+B b;
+
+a = b; //OK
+
+b = a; //false
+
+(다중상속) - c++만 가능 -(최대한 사용 하지 말자), 컨버전스(융합)
+전혀 다른 속성을 가진 클래스 끼리 합칠 떄 사용 
 
 
+정적 바인딩(컴파일시 결정)
+
+------------------------------------------------
+동적 바인딩(가상함수 virtual)//실행중에 결정
+
+
+-가상함수 테이블 생성(vptr)-
+
+clss A{
+public:
+	virtual void func()
+	{
+
+	}
+};
+
+class B:public A{
+	void func()
+	{
+
+	}
+
+};
+
+
+순수 가상함수 = //부모 클래스에서 가상함수를 만들시 자식 클래스에서 (꼭) 가상함수를 재정의를 해야된다.(오버라이딩)
+(스스로 객체를 생성 못 함)
+virtual void funC() = 0;//순수 가상함수 생성
+
+
+--예외처리--(후단처리)
+(버그)- 찾지 못한 오류- 
+	에러 vs 예외(상대적으로 덜 심각한 오류) - 대비 가능 - 
+  (복합적)
+   실행(x)
+ (심각한 오류)
+
+
+ -Tradeoff-
+ 속도 안정
+
+ c++ 대부분 메모리 에러 
+ (Smart PTL 스마트 포인터)
+
+ int Size 10;
+ int Array[Size];
+
+ bool Setvalue(int Data, int index)
+ {
+
+	if{index>=0 && index < Size)
+	{
+ 		Array[index] = Data
+		return true;
+	}
+
+ }
+ return false;
+
+
+ throw " ";
+
+ try  -  catch 문
+
+ try
+ {
+	Setvalue();
+ }
+ catch(char* ex)
+ {
+  cout << ex << "\n";
+ }
+
+ ---------------------------------------------
+( << 오른 쪽에 놓일 경우)
+맴버 함수에서 일반 함수로 변경한다.
+
+
+ 연산자 오버로딩 
+ Operator를 사용 
+
+ 
+ A& Operator++()//전위형
+ {
+	//내용
+	return this;
+ } 
+ 
+ A& Operator++(int)//후위형
+ {
+	A temp(height, weight);
+	height++;
+	weight++;
+	return temp;
+ }
+
+
+ ----------------------------------------------------
+ 형변환 연산자(C++)
+
+ const_cast(const형을 사용 가능하게 형 변환 시킨다.)
+ reinterpret_cast(강제 형변환_쓰지 말것)
+ static_cast(일반적으로 쓰이는 형변환)
+ dynamic_case(상속 관계에서 맞는 형변환인지 확일 할 때 쓰임)
+
+
+
+explicit(명시적 형변환)-묵시적으로 형 변환이 일어나지 않음----
+ ------volatile(형변환 지정 )------------------------------
+ ex) while( i>10){}
+ volatie while(i>10){}
+ -------------------------------------------------------
+
+
+
+
+
+----------------------------------------------
 
 /*
 Algorithm
@@ -559,7 +1937,7 @@ Algorithm
 
 
 탐색
-정렬->탐색-> Data를 찾는 것
+정렬->탐색-> Data를 찾는 것 
 1.순차 탐색
 2.이진 탬색(정렬->탐색 반복 n/2씩 줄어든다)-수정 없이 고정일 경우 괜찮으나 수정이 필요할 경우 좋지 않은 방법이다.
 3.이진 탐색 트리(완전 이진 트리인 경우 '효율'이 좋다.)
@@ -573,34 +1951,80 @@ Algorithm
 
 Node에 우선순위 값을 준다.
 
+이진트리지만 배열로 구현
+Heap Queue //주의 : 동적 메로리 heep아님
+
+Heep order property : 루트의 값이 자식 노드의 값보다 가장 작거나 가장 크다.
+
+
+k:인덱스 값
+
+2k+1 해당 노드의 왼쪽 자식노드
+2k-2 해당 노드의 오른쪽 자식노드
+
+(k-1)/2 해당 노드의 부모노드
+
+realloc 메모리상의사이즈를 커게잡아서카피(?)
+
+
+-Hash Tabel-
+:hash value(hash값) Table의 index 값
+Hash : 임의의 Data를 일정한 사이즈로 만드는것//임의의 값을 고정된 값으로 변경 
+예)
+(임의의 값) % 200 = 0 ~ 199 (hash value)
+
+Kye : Aalue  형태 
+
+↓
+Hash Funcion
+
+
+int table[100];
+
+100 : 2000
+
+key % 100 = 0
+
+table[0] = 2000
+
+배열 - 임의 접근 -  상수 시간 
+
+open addressing - 충돌 인정, 출돌하면 다음으로 이동 빈곳에 저장
+closed addressing - chaining - key 에 LinkedList를 붙인다. (배열에 노드르 붙인다.)
+
+
+
+Graph
+
+현실 세계의 현상(문제를)을 점과 선으로 해결하는 것
+. - .
+| \ |
+.   .
+
+.(점) Vertex (정점)
+/(선) edge (간선)
+인접(선으로 연결) 
+패스(경로로 인접)
+
+
+방향성 그래프
+
+비방향성 그래프
+
+인접 행렬 :  개수 만큼 2차원 배열을 만든다.
+
+
+인접 리스트 : 노드 형태로 붙인다.
+
 */
 
 
 </pre>
-        </details>
+</details>
 
 
-    </p>
-    <div id="disqus_thread"></div>
-    <script>
+</p>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://web1-r8ownsi0f5.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
 </body>
